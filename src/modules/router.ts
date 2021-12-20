@@ -2,7 +2,7 @@ import { existsSync } from 'fs'
 import { resolve } from 'pathe'
 import consola from 'consola'
 import { addTemplate, defineNuxtModule, templateUtils } from '@nuxt/kit'
-import type { Nuxt, NuxtModule, ModuleMeta } from '@nuxt/schema'
+import type { ModuleMeta, Nuxt, NuxtModule } from '@nuxt/schema'
 import type { RouteRecordRaw } from 'vue-router'
 
 const logger = consola.withTag('nuxt:router')

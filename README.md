@@ -1,4 +1,4 @@
-#  Sakai Admin Template for Vue  
+#  Sakai Admin Template for Nuxt 3  
  
 ### Live Preview
  
@@ -15,35 +15,41 @@ npm install
 or
 
 ```
-yarn
+yarn install
 ```
 
-Next step is running the application using the serve script and navigate to **http://localhost:8080/** to view the application.
+Next step is running the application using the serve script and navigate to **http://localhost:3000/** to view the application.
 That is it, you may now start with the development of your application using the Sakai template.</p>
 
 ```
-npm run serve
+npm run dev
+```
+
+or
+
+```
+yarn dev
 ```
 
 ### Vue CLI Scripts
 Following commands are derived from create-app-app.
 ```
-"npm run serve": Starts the development server
+"npm run dev": Starts the development server
 "npm run build": Builds the application for deployment.
-"npm run lint": Executes the lint checks.
-"npm run test:unit": Runs the tests.
+"npm run generate": Builds the application for static deployment.
+"npm run start": Runs the production server.
 ```
 
 ### Structure
-Sakai consists of 2 main parts; the application layout and the resources. **App.vue** inside src folder is the main component containing the template for the base layout whereas required resources such as SASS structure for the layout are placed inside the **src/assets/** folder.</p>
+Sakai consists of 2 main parts; the application layout and the resources. **app.vue** inside src folder is the main component containing the template for the base layout whereas required resources such as SASS structure for the layout are placed inside the **src/assets/** folder.</p>
 
 ### Layout Components
-Main layout is the template of the **App.vue**, it is divided into a couple of child components such as topbar, menu and footer. Here is template of the
-**App.vue** component that implements the logic such as menu state, layout modes and so on.
+Main layout is the template of the **app.vue**, it is divided into a couple of child components such as topbar, menu and footer. Here is template of the
+**app.vue** component that implements the logic such as menu state, layout modes and so on.
 
 ### Menu
 Menu is a separate component defined in **AppMenu.vue** file based on PrimeVue MenuModel API. In order to define the menuitems,
-navigate to data section of **App.vue** file and define your own model as a nested structure using the **menu** property.
+navigate to data section of **app.vue** file and define your own model as a nested structure using the **menu** property.
 
 ### Dependencies
 Dependencies of Sakai are listed below and needs to be added to package.json.
@@ -52,7 +58,7 @@ Dependencies of Sakai are listed below and needs to be added to package.json.
 {
     "primevue": "~3.7.1",
     "primeicons": "~4.1.0",
-    "primeflex": "~3.0.0",
+    "primeflex": "~3.0.0"
 }
 ```
 
@@ -64,8 +70,8 @@ In case you'd like to customize the layout variables, open **_variables.scss** f
 
 **src/assets/_variables.scss**
 ```css
-$fontSize:1rem;
-$borderRadius:12px;
-$transitionDuration:.2s;
-$maskBg:rgba(0, 0, 0, 0.4);
+$fontSize: 1rem;
+$borderRadius: 12px;
+$transitionDuration: .2s;
+$maskBg: rgba(0, 0, 0, 0.4);
 ```
