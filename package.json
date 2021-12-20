@@ -7,7 +7,7 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.13.1",
+    "@antfu/eslint-config": "0.14.0",
     "@nuxtjs/eslint-config-typescript": "8.0.0",
     "@nuxtjs/eslint-module": "3.0.2",
     "@vueuse/components": "7.4.0",
