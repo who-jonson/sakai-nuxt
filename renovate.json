@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "packageNames": ["nuxt3"],
+      "groupName": "Nuxt 3 core packages"
+    }
+  ]
+}
