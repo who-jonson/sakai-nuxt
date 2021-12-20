@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi build",
+    "build": "nuxi generate",
     "generate": "nuxi generate",
     "start": "node .output/server/index.mjs",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
