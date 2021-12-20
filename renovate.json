@@ -1,6 +1,5 @@
 {
   "extends": [
-    "@nuxt",
-    "@nuxtjs"
+    "nuxt3"
   ]
 }
