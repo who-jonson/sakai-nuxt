@@ -31,8 +31,8 @@ or
 yarn dev
 ```
 
-### Vue CLI Scripts
-Following commands are derived from create-app-app.
+### Nuxi CLI Scripts
+Following commands are derived from create app.
 ```
 "npm run dev": Starts the development server
 "npm run build": Builds the application for deployment.
