@@ -19,7 +19,7 @@
     "patch-vue-directive-ssr": "0.0.1",
     "sass": "1.45.1",
     "sass-loader": "12.4.0",
-    "typescript": "4.5.4"
+    "typescript": "4.5.5"
   },
   "dependencies": {
     "chart.js": "3.7.0",
