@@ -9,7 +9,7 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "0.16.0",
+    "@antfu/eslint-config": "0.23.1",
     "@nuxtjs/eslint-config-typescript": "8.0.0",
     "@vueuse/components": "7.4.3",
     "@vueuse/nuxt": "7.4.3",
