@@ -11,7 +11,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.23.1",
     "@nuxtjs/eslint-config-typescript": "8.0.0",
-    "@vueuse/components": "7.7.1",
+    "@vueuse/components": "8.5.0",
     "@vueuse/nuxt": "7.7.1",
     "eslint": "8.15.0",
     "eslint-plugin-nuxt": "3.2.0",
