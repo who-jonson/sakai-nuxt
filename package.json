@@ -15,7 +15,7 @@
     "@vueuse/nuxt": "7.4.3",
     "eslint": "8.5.0",
     "eslint-plugin-nuxt": "3.1.0",
-    "nuxt": "3.0.0-rc.2",
+    "nuxt": "3.0.0-rc.3",
     "patch-vue-directive-ssr": "0.0.1",
     "sass": "1.51.0",
     "sass-loader": "12.4.0",
