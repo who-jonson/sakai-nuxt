@@ -18,7 +18,7 @@
     "nuxt": "3.0.0-rc.6",
     "patch-vue-directive-ssr": "0.0.1",
     "sass": "1.54.0",
-    "sass-loader": "12.6.0",
+    "sass-loader": "13.0.2",
     "typescript": "4.7.4"
   },
   "dependencies": {
