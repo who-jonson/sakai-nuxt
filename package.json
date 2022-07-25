@@ -10,23 +10,23 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "0.25.2",
-    "@nuxtjs/eslint-config-typescript": "^10.0.0",
-    "@vueuse/components": "^8.5.0",
-    "@vueuse/nuxt": "^8.5.0",
-    "eslint": "^8.15.0",
-    "eslint-plugin-nuxt": "^3.2.0",
-    "nuxt": "^3.0.0-rc.3",
-    "patch-vue-directive-ssr": "^0.0.1",
-    "sass": "^1.51.0",
-    "sass-loader": "^12.6.0",
-    "typescript": "^4.6.4"
+    "@nuxtjs/eslint-config-typescript": "10.0.0",
+    "@vueuse/components": "8.9.4",
+    "@vueuse/nuxt": "8.9.4",
+    "eslint": "8.20.0",
+    "eslint-plugin-nuxt": "3.2.0",
+    "nuxt": "3.0.0-rc.6",
+    "patch-vue-directive-ssr": "0.0.1",
+    "sass": "1.54.0",
+    "sass-loader": "12.6.0",
+    "typescript": "4.7.4"
   },
   "dependencies": {
     "chart.js": "3.8.2",
-    "core-js": "^3.22.5",
+    "core-js": "3.24.0",
     "primeflex": "3.2.1",
-    "primeicons": "^5.0.0",
-    "primevue": "^3.12.6",
+    "primeicons": "5.0.0",
+    "primevue": "3.15.0",
     "prismjs": "1.28.0"
   }
 }
