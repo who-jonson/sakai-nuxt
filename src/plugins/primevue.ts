@@ -84,10 +84,9 @@ import TreeSelect from 'primevue/treeselect'
 import TreeTable from 'primevue/treetable'
 import TriStateCheckbox from 'primevue/tristatecheckbox'
 
+import { defineNuxtPlugin } from '#app'
 import CodeHighlight from '~/directives/code'
 import BlockViewer from '~/components/common/BlockViewer.vue'
-
-import { defineNuxtPlugin } from '#app'
 
 declare interface AppState {
   theme?: string

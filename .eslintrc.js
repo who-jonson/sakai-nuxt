@@ -6,7 +6,6 @@ module.exports = {
     node: true
   },
   extends: [
-    '@antfu',
     '@nuxtjs/eslint-config-typescript',
     'plugin:nuxt/recommended',
     'plugin:vue/vue3-essential'

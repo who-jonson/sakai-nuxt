@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     '~/assets/demo/flags/flags.css'
   ],
 
-  buildModules: [
+  modules: [
     '@vueuse/nuxt'
   ],
 
