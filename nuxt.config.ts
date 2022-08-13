@@ -21,7 +21,6 @@ export default defineNuxtConfig({
     'primeflex/primeflex.css',
     'primeicons/primeicons.css',
     'prismjs/themes/prism-coy.css',
-
     '~/assets/styles/layout.scss',
     '~/assets/demo/flags/flags.css'
   ],
