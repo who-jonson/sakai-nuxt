@@ -5,15 +5,16 @@
     "build": "nuxi generate",
     "generate": "nuxi generate",
     "start": "node .output/server/index.mjs",
+    "test": "vitest -c vitest.config.ts",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "primeflex": "3.2.1",
-    "primeicons": "5.0.0",
-    "primevue": "3.15.0"
+    "pinia": "^2.0.17"
   },
   "devDependencies": {
+    "@pinia/nuxt": "^0.3.1",
+    "@pinia/testing": "^0.0.13",
     "@nuxt/test-utils": "^3.0.0-rc.8",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@testing-library/vue": "latest",
@@ -28,6 +29,9 @@
     "eslint": "8.21.0",
     "eslint-plugin-nuxt": "^3.2.0",
     "nuxt": "^3.0.0-rc.8",
+    "primeflex": "3.2.1",
+    "primeicons": "5.0.0",
+    "primevue": "3.15.0",
     "prismjs": "1.28.0",
     "sass": "^1.54.4",
     "sass-loader": "13.0.2",
@@ -42,8 +46,9 @@
       "unplugin": "latest"
     }
   },
-  "packageManager": "pnpm@7.9.0",
   "engines": {
-    "node": "^14.16 || >=16.14"
+    "node": "^14.16 || >=16.14",
+    "npm": ">=8.10",
+    "pnpm": ">=7.6"
   }
 }

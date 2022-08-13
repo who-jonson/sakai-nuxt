@@ -6,6 +6,8 @@ overrides:
 specifiers:
   '@nuxt/test-utils': ^3.0.0-rc.8
   '@nuxtjs/eslint-config-typescript': latest
+  '@pinia/nuxt': ^0.3.1
+  '@pinia/testing': ^0.0.13
   '@testing-library/vue': latest
   '@types/node': ^18.7.2
   '@types/serialize-javascript': ^5.0.2
@@ -18,6 +20,7 @@ specifiers:
   eslint: 8.21.0
   eslint-plugin-nuxt: ^3.2.0
   nuxt: ^3.0.0-rc.8
+  pinia: ^2.0.17
   primeflex: 3.2.1
   primeicons: 5.0.0
   primevue: 3.15.0
@@ -31,13 +34,13 @@ specifiers:
   webpack: latest
 
 dependencies:
-  primeflex: 3.2.1
-  primeicons: 5.0.0
-  primevue: 3.15.0_pup2jerpb5yobt7sxmawn3p42u
+  pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
 
 devDependencies:
   '@nuxt/test-utils': 3.0.0-rc.8_im5bzhqbv4ss3g2rb7nwof4a6m
   '@nuxtjs/eslint-config-typescript': 10.0.0_qugx7qdu5zevzvxaiqyxfiwquq
+  '@pinia/nuxt': 0.3.1_a47yo7ywznolciewyloczscazu
+  '@pinia/testing': 0.0.13_pinia@2.0.18+vue@3.2.37
   '@testing-library/vue': 6.6.1_2yymnzrok6eda47acnj2yjm3ae
   '@types/node': 18.7.2
   '@types/serialize-javascript': 5.0.2
@@ -50,6 +53,9 @@ devDependencies:
   eslint: 8.21.0
   eslint-plugin-nuxt: 3.2.0_eslint@8.21.0
   nuxt: 3.0.0-rc.8_hp3aahufpldunonrz7by6rel54
+  primeflex: 3.2.1
+  primeicons: 5.0.0
+  primevue: 3.15.0_pup2jerpb5yobt7sxmawn3p42u
   prismjs: 1.28.0
   sass: 1.54.4
   sass-loader: 13.0.2_sass@1.54.4+webpack@5.74.0
@@ -805,6 +811,34 @@ packages:
       - supports-color
     dev: true
 
+  /@pinia/nuxt/0.3.1_a47yo7ywznolciewyloczscazu:
+    resolution: {integrity: sha512-JoDvTolUrJPfe9xEmvHz0jRqd3vYzuStqtt1k3SgwHChIWxxnlZ8hmU1RlXIh51RGL549LeXupSiKGydDIYc2A==}
+    dependencies:
+      '@nuxt/kit': 3.0.0-rc.6_vite@3.0.7+webpack@5.74.0
+      pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - esbuild
+      - rollup
+      - supports-color
+      - typescript
+      - vite
+      - vue
+      - webpack
+    dev: true
+
+  /@pinia/testing/0.0.13_pinia@2.0.18+vue@3.2.37:
+    resolution: {integrity: sha512-OiqJzUzHrBetqYZ0IrT4MCz4WGViVLjWlsC6xhyf6t/PDUR5IxeLK3HJcP4i3y6Pq4+IVLYhu6xfy1PGfY9p5Q==}
+    peerDependencies:
+      pinia: '>=2.0.17'
+    dependencies:
+      pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
+      vue-demi: 0.13.7_vue@3.2.37
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
   /@rollup/plugin-alias/3.1.9_rollup@2.77.3:
     resolution: {integrity: sha512-QI5fsEvm9bDzt32k39wpOwZhVzRcL5ydcffUHMyLVaVaLeC70I8TJZ17F1z1eMoLu4E/UOcH9BWVkKpIKdrfiw==}
     engines: {node: '>=8.0.0'}
@@ -1251,7 +1285,6 @@ packages:
 
   /@vue/devtools-api/6.2.1:
     resolution: {integrity: sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==}
-    dev: true
 
   /@vue/reactivity-transform/3.2.37:
     resolution: {integrity: sha512-IWopkKEb+8qpu/1eMKVeXrK0NLw9HicGviJzhJDEyfxTR9e1WtpnnbYkJWurX6WwoFP0sz10xQg8yL8lgskAZg==}
@@ -5101,6 +5134,23 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /pinia/2.0.18_j6bzmzd4ujpabbp5objtwxyjp4:
+    resolution: {integrity: sha512-I5MW05UVX6a5Djka136oH3VzYFiZUgeOApBwFjMx6pL91eHtGVlE3adjNUKLgtwGnrxiBRuJ8+4R3LKJKwnyZg==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': 6.2.1
+      typescript: 4.7.4
+      vue: 3.2.37
+      vue-demi: 0.13.7_vue@3.2.37
+
   /pkg-types/0.3.3:
     resolution: {integrity: sha512-6AJcCMnjUQPQv/Wk960w0TOmjhdjbeaQJoSKWRQv9N3rgkessCu6J0Ydsog/nw1MbpnxHuPzYbfOn2KmlZO1FA==}
     dependencies:
@@ -5468,11 +5518,11 @@ packages:
 
   /primeflex/3.2.1:
     resolution: {integrity: sha512-sGDJ4mh2fG19xa1yc4IPGSQ8MUMyu5nU+tYnl27AFuFHhX8XwEA7fWCtWyBbclclVhXtre+Kf9WobWPnfxWAEQ==}
-    dev: false
+    dev: true
 
   /primeicons/5.0.0:
     resolution: {integrity: sha512-heygWF0X5HFI1otlZE62pp6ye7sZ8om78J9au2BRkg8O7Y8AHTZ9qKMRzchZUHLe8zUAvdi6hZzzm9XxgwIExw==}
-    dev: false
+    dev: true
 
   /primevue/3.15.0_pup2jerpb5yobt7sxmawn3p42u:
     resolution: {integrity: sha512-WOOjUJ53DUbYqh+jhxciNNrHiets4tgGaCkAaPSP3CrFvXBK2Vs38cPbVd+iVhJMsUoT//+pkP58j7eE8BcF8Q==}
@@ -5482,7 +5532,7 @@ packages:
     dependencies:
       primeicons: 5.0.0
       vue: 3.2.37
-    dev: false
+    dev: true
 
   /prismjs/1.28.0:
     resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
@@ -6338,7 +6388,6 @@ packages:
     resolution: {integrity: sha512-C0WQT0gezHuw6AdY1M2jxUO83Rjf0HP7Sk1DtXj6j1EwkQNZrHAg2XPWlq62oqEhYvONq5pkC2Y9oPljWToLmQ==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /ufo/0.8.5:
     resolution: {integrity: sha512-e4+UtA5IRO+ha6hYklwj6r7BjiGMxS0O+UaSg9HbaTefg4kMkzj4tXzEBajRR+wkxf+golgAWKzLbytCUDMJAA==}
@@ -6758,7 +6807,6 @@ packages:
         optional: true
     dependencies:
       vue: 3.2.37
-    dev: true
 
   /vue-eslint-parser/8.3.0_eslint@8.21.0:
     resolution: {integrity: sha512-dzHGG3+sYwSf6zFBa0Gi9ZDshD7+ad14DGOdTLjruRVgZXe2J+DcZ9iUhyR48z5g1PqRa20yt3Njna/veLJL/g==}

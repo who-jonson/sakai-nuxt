@@ -79,6 +79,9 @@ export default {
           items: [
             { label: 'Crud', icon: 'pi pi-fw pi-user-edit', to: '/demo/pages/crud' },
             { label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/demo/pages/timeline' },
+            { label: 'Landing', icon: 'pi pi-fw pi-calendar', to: '/demo/pages/landing' },
+            { label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login' },
+            { label: 'Not Found', icon: 'pi pi-fw pi-exclamation-circle', to: '/notfound' },
             { label: 'Empty', icon: 'pi pi-fw pi-circle-off', to: '/demo/pages/empty' }
           ]
         },

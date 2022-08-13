@@ -1,15 +1,18 @@
-import { resolve } from 'path'
+import { fileURLToPath } from 'url'
+import { resolve } from 'pathe'
 import { defineNuxtConfig } from 'nuxt'
+
+const resolvePath = (...paths: string[]) => resolve(fileURLToPath(new URL('./', import.meta.url)), ...paths)
 
 export default defineNuxtConfig({
   alias: {
-    public: resolve(__dirname, './public/')
+    public: resolvePath('./public/')
   },
 
-  srcDir: 'src/',
-
-  dir: {
-    public: resolve(__dirname, './public/')
+  build: {
+    transpile: [
+      'primevue'
+    ]
   },
 
   css: [
@@ -23,9 +26,14 @@ export default defineNuxtConfig({
     '~/assets/demo/flags/flags.css'
   ],
 
-  modules: [
-    '@vueuse/nuxt'
-  ],
+  dir: {
+    public: resolvePath('./public/')
+  },
+
+  experimental: {
+    reactivityTransform: true,
+    viteNode: false
+  },
 
   meta: {
     meta: [
@@ -38,14 +46,15 @@ export default defineNuxtConfig({
     ]
   },
 
-  generate: {
-    routes: ['/'],
-    subFolders: true
-  },
+  modules: [
+    '@pinia/nuxt',
+    '@vueuse/nuxt'
+  ],
 
-  ssr: false,
+  srcDir: 'src/',
 
   vite: {
+    clearScreen: true,
     logLevel: 'info'
   }
 })

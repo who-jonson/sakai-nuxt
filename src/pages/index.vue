@@ -271,58 +271,50 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import ProductService from '~~/services/ProductService'
 
-export default defineComponent({
-  setup () {
-    useMeta({
-      title: 'Dashboard'
-    })
-  },
-  data () {
-    return {
-      products: [],
-      lineData: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [
-          {
-            label: 'Revenue',
-            data: [65, 59, 80, 81, 56, 55, 40],
-            fill: false,
-            backgroundColor: '#2f4860',
-            borderColor: '#2f4860',
-            tension: 0.4
-          },
-          {
-            label: 'Sales',
-            data: [28, 48, 40, 19, 86, 27, 90],
-            fill: false,
-            backgroundColor: '#00bb7e',
-            borderColor: '#00bb7e',
-            tension: 0.4
-          }
-        ]
-      },
-      items: [
-        { label: 'Add New', icon: 'pi pi-fw pi-plus' },
-        { label: 'Remove', icon: 'pi pi-fw pi-minus' }
-      ]
+const productService = new ProductService()
+
+useHead({
+  title: 'Dashboard'
+})
+
+const products = ref([])
+const items = ref([
+  { label: 'Add New', icon: 'pi pi-fw pi-plus' },
+  { label: 'Remove', icon: 'pi pi-fw pi-minus' }
+])
+const lineData = ref({
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  datasets: [
+    {
+      label: 'Revenue',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      fill: false,
+      backgroundColor: '#2f4860',
+      borderColor: '#2f4860',
+      tension: 0.4
+    },
+    {
+      label: 'Sales',
+      data: [28, 48, 40, 19, 86, 27, 90],
+      fill: false,
+      backgroundColor: '#00bb7e',
+      borderColor: '#00bb7e',
+      tension: 0.4
     }
-  },
-  productService: null,
-  created () {
-    this.productService = new ProductService()
-  },
-  mounted () {
-    this.productService.getProductsSmall().then((data) => {
-      this.products = data
-    })
-  },
-  methods: {
-    formatCurrency (value) {
-      return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-    }
-  }
+  ]
+})
+
+function formatCurrency (value) {
+  // @ts-ignore
+  return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+}
+
+onMounted(() => {
+  productService.getProductsSmall().then((data) => {
+    products.value = data
+  })
 })
 </script>
