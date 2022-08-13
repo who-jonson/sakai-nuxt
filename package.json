@@ -13,7 +13,7 @@
     "pinia": "^2.0.17"
   },
   "devDependencies": {
-    "@pinia/nuxt": "^0.3.1",
+    "@pinia/nuxt": "^0.4.0",
     "@pinia/testing": "^0.0.13",
     "@nuxt/test-utils": "^3.0.0-rc.8",
     "@nuxtjs/eslint-config-typescript": "latest",

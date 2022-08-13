@@ -6,7 +6,7 @@ overrides:
 specifiers:
   '@nuxt/test-utils': ^3.0.0-rc.8
   '@nuxtjs/eslint-config-typescript': latest
-  '@pinia/nuxt': ^0.3.1
+  '@pinia/nuxt': ^0.4.0
   '@pinia/testing': ^0.0.13
   '@testing-library/vue': latest
   '@types/node': ^18.7.2
@@ -39,7 +39,7 @@ dependencies:
 devDependencies:
   '@nuxt/test-utils': 3.0.0-rc.8_im5bzhqbv4ss3g2rb7nwof4a6m
   '@nuxtjs/eslint-config-typescript': 10.0.0_qugx7qdu5zevzvxaiqyxfiwquq
-  '@pinia/nuxt': 0.3.1_a47yo7ywznolciewyloczscazu
+  '@pinia/nuxt': 0.4.0_a47yo7ywznolciewyloczscazu
   '@pinia/testing': 0.0.13_pinia@2.0.18+vue@3.2.37
   '@testing-library/vue': 6.6.1_2yymnzrok6eda47acnj2yjm3ae
   '@types/node': 18.7.2
@@ -811,8 +811,8 @@ packages:
       - supports-color
     dev: true
 
-  /@pinia/nuxt/0.3.1_a47yo7ywznolciewyloczscazu:
-    resolution: {integrity: sha512-JoDvTolUrJPfe9xEmvHz0jRqd3vYzuStqtt1k3SgwHChIWxxnlZ8hmU1RlXIh51RGL549LeXupSiKGydDIYc2A==}
+  /@pinia/nuxt/0.4.0_a47yo7ywznolciewyloczscazu:
+    resolution: {integrity: sha512-gJ0qRJ5KhpFrYVs6qdqTWXPp9DAzbs9u74zJw5hyQO7tRiItRUYQxbWtWjGC3XUw5oO73xYrA8lYa5/GMW0uSg==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.6_vite@3.0.7+webpack@5.74.0
       pinia: 2.0.18_j6bzmzd4ujpabbp5objtwxyjp4
