@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "build": "nuxi generate",
+    "build": "nuxi build",
     "generate": "nuxi generate",
     "start": "node .output/server/index.mjs",
     "test": "vitest -c vitest.config.ts",
