@@ -50,6 +50,10 @@ export default defineNuxtConfig({
     '@vueuse/nuxt'
   ],
 
+  nitro: {
+    preset: 'vercel'
+  },
+
   srcDir: 'src/',
 
   vite: {
