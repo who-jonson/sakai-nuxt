@@ -19,9 +19,11 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-return-assign': 'off',
     'no-tabs': 'off',
+    'import/no-named-as-default': 'off',
     'no-unused-expressions': 'off',
     'vue/no-v-html': 'off',
     'vue/no-v-model-argument': 'off',
+    'vue/no-template-shadow': 'off',
     'vue/multi-word-component-names': 'off'
   },
   overrides: [

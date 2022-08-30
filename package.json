@@ -10,15 +10,15 @@
     "lint:fix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
-    "pinia": "^2.0.17"
+    "pinia": "^2.0.21"
   },
   "devDependencies": {
-    "@pinia/nuxt": "^0.4.0",
-    "@pinia/testing": "^0.0.13",
+    "@pinia/nuxt": "^0.4.1",
+    "@pinia/testing": "^0.0.14",
     "@nuxt/test-utils": "^3.0.0-rc.8",
     "@nuxtjs/eslint-config-typescript": "latest",
     "@testing-library/vue": "latest",
-    "@types/node": "^18.7.2",
+    "@types/node": "^18.7.14",
     "@types/serialize-javascript": "^5.0.2",
     "@vue/compiler-sfc": "latest",
     "@vueuse/components": "latest",
@@ -26,16 +26,16 @@
     "@whoj/utils": "latest",
     "chart.js": "3.9.1",
     "core-js": "latest",
-    "eslint": "8.23.0",
+    "eslint": "latest",
     "eslint-plugin-nuxt": "^3.2.0",
     "nuxt": "^3.0.0-rc.8",
     "primeflex": "3.2.1",
     "primeicons": "5.0.0",
-    "primevue": "3.15.0",
-    "prismjs": "1.28.0",
-    "sass": "^1.54.4",
+    "primevue": "3.16.2",
+    "prismjs": "1.29.0",
+    "sass": "^1.54.6",
     "sass-loader": "13.0.2",
-    "typescript": "4.7.4",
+    "typescript": "4.8.2",
     "vite": "latest",
     "vitest": "latest",
     "vue": "latest",
@@ -43,10 +43,13 @@
   },
   "pnpm": {
     "overrides": {
-      "unplugin": "latest"
+      "unplugin": "latest",
+      "@typescript-eslint/parser": "^5.36.1",
+      "@typescript-eslint/typescript-estree": "^5.36.1"
     }
   },
+  "packageManager": "pnpm@7.9.5",
   "engines": {
-    "node": "^14.16 || >=16.14"
+    "node": "^14.18 || >=16.15"
   }
 }
