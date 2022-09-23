@@ -28,7 +28,7 @@
     "chart.js": "3.9.1",
     "core-js": "^3.25.2",
     "eslint": "latest",
-    "eslint-plugin-nuxt": "^3.2.0",
+    "eslint-plugin-nuxt": "^4.0.0",
     "nuxt": "3.0.0-rc.11",
     "primeflex": "3.2.1",
     "primeicons": "5.0.0",
