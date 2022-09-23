@@ -48,7 +48,7 @@
       "@typescript-eslint/typescript-estree": "^5.36.1"
     }
   },
-  "packageManager": "pnpm@7.9.5",
+  "packageManager": "pnpm@7.12.2",
   "engines": {
     "node": "^14.18 || >=16.15"
   }
