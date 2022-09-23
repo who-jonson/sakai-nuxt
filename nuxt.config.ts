@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url'
 import { resolve } from 'pathe'
-import { defineNuxtConfig } from 'nuxt'
+import { defineNuxtConfig } from 'nuxt/config'
 
 const resolvePath = (...paths: string[]) => resolve(fileURLToPath(new URL('./', import.meta.url)), ...paths)
 
