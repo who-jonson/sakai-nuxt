@@ -7,7 +7,7 @@ overrides:
 
 specifiers:
   '@nuxt/test-utils': 3.0.0-rc.11
-  '@nuxtjs/eslint-config-typescript': ^11.0.0
+  '@nuxtjs/eslint-config-typescript': latest
   '@pinia/nuxt': ^0.4.2
   '@pinia/testing': ^0.0.14
   '@testing-library/vue': latest
@@ -25,7 +25,7 @@ specifiers:
   pinia: ^2.0.22
   primeflex: 3.2.1
   primeicons: 5.0.0
-  primevue: 3.16.2
+  primevue: 3.17.0
   prismjs: 1.29.0
   sass: ^1.55.0
   sass-loader: 13.0.2
@@ -57,7 +57,7 @@ devDependencies:
   nuxt: 3.0.0-rc.11_zqw2ubgsdtt5ykkt4ldsfqh2hi
   primeflex: 3.2.1
   primeicons: 5.0.0
-  primevue: 3.16.2_fokprbeo3ejjqgdzd5mndogod4
+  primevue: 3.17.0_fokprbeo3ejjqgdzd5mndogod4
   prismjs: 1.29.0
   sass: 1.55.0
   sass-loader: 13.0.2_sass@1.55.0+webpack@5.74.0
@@ -912,13 +912,13 @@ packages:
     resolution: {integrity: sha512-9K4zoImiZc3HlIp6AVUDE4CWYx22a+lhSZMYNpbjW04+YF0KWj4pJXnEMjdnFTiQibFFmElcsasJXDbdI/EPhA==}
     dependencies:
       '@types/eslint': 8.4.6
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
     dev: true
 
   /@types/eslint/8.4.6:
     resolution: {integrity: sha512-/fqTbjxyFUaYNO7VcW5g+4npmqVACz1bB7RTHYuLj+PRjw9hrCwrUXVQFpChUS0JsyEFvMZ7U/PfmvWgxJhI9g==}
     dependencies:
-      '@types/estree': 0.0.51
+      '@types/estree': 1.0.0
       '@types/json-schema': 7.0.11
     dev: true
 
@@ -3169,17 +3169,6 @@ packages:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
     dev: true
 
-  /fast-glob/3.2.11:
-    resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
-    dev: true
-
   /fast-glob/3.2.12:
     resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
     engines: {node: '>=8.6.0'}
@@ -3511,7 +3500,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       dir-glob: 3.0.1
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 4.0.0
@@ -5290,8 +5279,8 @@ packages:
     resolution: {integrity: sha512-heygWF0X5HFI1otlZE62pp6ye7sZ8om78J9au2BRkg8O7Y8AHTZ9qKMRzchZUHLe8zUAvdi6hZzzm9XxgwIExw==}
     dev: true
 
-  /primevue/3.16.2_fokprbeo3ejjqgdzd5mndogod4:
-    resolution: {integrity: sha512-wvZj0kEnpVFZDb3vLy7SFrjZaPBjrznt4iq/CiLmofcPETwxQjbr7E+8ZFtPiQR1oUvhXyQ/Lyu9yTj9TjA0+g==}
+  /primevue/3.17.0_fokprbeo3ejjqgdzd5mndogod4:
+    resolution: {integrity: sha512-z7ZCHk4kgkHJ29hg0izN1M8Xst2MOObimq62waE2TDE8ztH9mp2sAdGGsQu1shMa4/23dZ+fcN4t+KpYNICRyQ==}
     peerDependencies:
       primeicons: ^5.0.0
       vue: ^3.0.0
@@ -6230,7 +6219,7 @@ packages:
     dependencies:
       '@rollup/pluginutils': 4.2.1
       escape-string-regexp: 5.0.0
-      fast-glob: 3.2.11
+      fast-glob: 3.2.12
       local-pkg: 0.4.2
       magic-string: 0.26.4
       mlly: 0.5.16
