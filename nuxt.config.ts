@@ -11,6 +11,7 @@ export default defineNuxtConfig({
 
   build: {
     transpile: [
+      'chart.js',
       'primevue'
     ]
   },
@@ -57,6 +58,9 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   vite: {
+    build: {
+      sourcemap: process.env.NODE_ENV !== 'production'
+    },
     clearScreen: true,
     logLevel: 'info'
   }

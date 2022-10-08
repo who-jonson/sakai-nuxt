@@ -24,17 +24,15 @@ module.exports = {
     'vue/no-v-html': 'off',
     'vue/no-v-model-argument': 'off',
     'vue/no-template-shadow': 'off',
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': 'off',
+    'vue/no-reserved-component-names': 'off'
   },
   overrides: [
     {
       files: [
         '**/__tests__/*.{j,t}s?(x)',
         '**/tests/unit/**/*.spec.{j,t}s?(x)'
-      ],
-      env: {
-        jest: true
-      }
+      ]
     }
   ]
 }
