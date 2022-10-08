@@ -2,42 +2,42 @@
  
 ### Live Preview
  
-Visit [Sakai Vue](https://www.primefaces.org/sakai-vue) website for a live preview. 
+Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
  
 ### Getting Started
 Sakai is an application template for Vue based on the [Vue CLI](https://cli.vuejs.org/) that provides out-of-the-box standard
-tooling for Vue projects. To get started, clone this repository from GitHub and install the dependencies with npm or yarn.
+tooling for Vue projects. To get started, clone this repository from GitHub and install the dependencies with pnpm or npm or yarn.
                 
-```
-npm install
+```bash
+pnpm install  # npm install
 ```
 
 or
 
-```
+```bash
 yarn install
 ```
 
 Next step is running the application using the serve script and navigate to **http://localhost:3000/** to view the application.
 That is it, you may now start with the development of your application using the Sakai template.</p>
 
-```
-npm run dev
+```bash
+pnpm dev # npm run dev
 ```
 
 or
 
-```
+```bash
 yarn dev
 ```
 
 ### Nuxi CLI Scripts
 Following commands are derived from create app.
 ```
-"npm run dev": Starts the development server
-"npm run build": Builds the application for deployment.
-"npm run generate": Builds the application for static deployment.
-"npm run start": Runs the production server.
+"pnpm run dev": Starts the development server
+"pnpm run build": Builds the application for deployment.
+"pnpm run generate": Builds the application for static deployment.
+"pnpm run start": Runs the production server.
 ```
 
 ### Structure
@@ -56,9 +56,9 @@ Dependencies of Sakai are listed below and needs to be added to package.json.
 
 ```json
 {
-    "primevue": "~3.7.1",
-    "primeicons": "~4.1.0",
-    "primeflex": "~3.0.0"
+    "primeflex": "3.2.1",
+    "primeicons": "6.0.1",
+    "primevue": "3.17.0"
 }
 ```
 
