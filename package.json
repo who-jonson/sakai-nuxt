@@ -53,7 +53,7 @@
       "allowAny": ["primeicons"]
     }
   },
-  "packageManager": "pnpm@7.13.2",
+  "packageManager": "pnpm@7.13.3",
   "engines": {
     "node": "^14.19 || >=16.16"
   }
