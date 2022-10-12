@@ -141,7 +141,7 @@ export default {
           label: 'Get Started',
           items: [
             { label: 'Documentation', icon: 'pi pi-fw pi-question', command: () => { window.location.href = '/documentation' } },
-            { label: 'View Source', icon: 'pi pi-fw pi-search', command: () => { window.location.href = 'https://github.com/primefaces/sakai-vue' } }
+            { label: 'View Source', icon: 'pi pi-fw pi-search', url: 'https://github.com/who-jonson/sakai-nuxt' }
           ]
         }
       ]

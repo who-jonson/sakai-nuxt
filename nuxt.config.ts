@@ -16,8 +16,18 @@ export default defineNuxtConfig({
     ]
   },
 
+  components: {
+    dirs: [
+      {
+        extensions: ['vue'],
+        global: true,
+        path: '~/components/common/',
+        pathPrefix: false
+      }
+    ]
+  },
+
   css: [
-    'primevue/resources/themes/saga-blue/theme.css',
     'primevue/resources/primevue.css',
     'primeflex/primeflex.css',
     'primeicons/primeicons.css',
@@ -35,20 +45,27 @@ export default defineNuxtConfig({
     viteNode: false
   },
 
+  imports: {
+    autoImport: true,
+    addons: {
+      vueTemplate: true
+    }
+  },
+
   meta: {
     meta: [
       { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     ],
     link: [
-      { rel: 'icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/themes/lara-light-indigo/theme.css' }
+      { rel: 'icon', href: '/favicon.ico' }
     ]
   },
 
   modules: [
     '@pinia/nuxt',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '~/modules/primevue'
   ],
 
   nitro: {

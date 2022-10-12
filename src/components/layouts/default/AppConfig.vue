@@ -247,11 +247,13 @@
 </template>
 
 <script lang="ts">
-export default {
+import type { PropType } from 'vue'
+
+export default defineComponent({
   props: {
     layoutMode: {
-      type: String,
-      default: null
+      type: String as PropType<'static' | 'overlay'>,
+      default: 'static'
     }
   },
   emits: ['layout-change'],
@@ -338,10 +340,7 @@ export default {
     applyScale () {
       document.documentElement.style.fontSize = `${this.scale}px`
     },
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    changeTheme (event, theme, dark) {
-      const themeElement = document.getElementById('theme-link')
-      themeElement.setAttribute('href', themeElement.getAttribute('href').replace(this.$appState.theme, theme))
+    changeTheme (event: any, theme: string, dark?: boolean) {
       this.$appState.theme = theme
       this.$appState.darkTheme = dark
 
@@ -350,5 +349,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

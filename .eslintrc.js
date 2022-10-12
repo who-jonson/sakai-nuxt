@@ -25,7 +25,8 @@ module.exports = {
     'vue/no-v-model-argument': 'off',
     'vue/no-template-shadow': 'off',
     'vue/multi-word-component-names': 'off',
-    'vue/no-reserved-component-names': 'off'
+    'vue/no-reserved-component-names': 'off',
+    '@typescript-eslint/no-unused-vars': 'off'
   },
   overrides: [
     {
