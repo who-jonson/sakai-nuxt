@@ -56,7 +56,7 @@
       ]
     }
   },
-  "packageManager": "pnpm@7.13.5",
+  "packageManager": "pnpm@7.13.6",
   "engines": {
     "node": "^14.19 || >=16.16"
   }
