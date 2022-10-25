@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "3.0.0-rc.12",
-    "@nuxtjs/eslint-config-typescript": "latest",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@pinia/nuxt": "^0.4.3",
     "@pinia/testing": "^0.0.14",
     "@testing-library/vue": "latest",
@@ -25,7 +25,7 @@
     "@vueuse/components": "^9.3.1",
     "@vueuse/core": "^9.3.1",
     "@vueuse/nuxt": "^9.3.1",
-    "@whoj/eslint-config": "latest",
+    "@whoj/eslint-config": "^1.0.1",
     "@whoj/utils": "^1.0.0",
     "chart.js": "3.9.1",
     "core-js": "^3.25.5",
@@ -42,7 +42,7 @@
     "vite": "^3.1.8",
     "vitest": "^0.24.3",
     "vue": "^3.2.41",
-    "webpack": "latest"
+    "webpack": "^5.74.0"
   },
   "pnpm": {
     "overrides": {
@@ -58,6 +58,6 @@
   },
   "packageManager": "pnpm@7.13.5",
   "engines": {
-    "node": "^14.19 || >=16.16"
+    "node": "^14.20 || >=16.18"
   }
 }
