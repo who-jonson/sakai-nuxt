@@ -1,5 +1,10 @@
 lockfileVersion: 5.4
 
+overrides:
+  unplugin: latest
+  '@typescript-eslint/parser': ^5.36.1
+  '@typescript-eslint/typescript-estree': ^5.36.1
+
 specifiers:
   '@nuxt/test-utils': 3.0.0-rc.12
   '@nuxtjs/eslint-config-typescript': ^11.0.0
@@ -22,7 +27,7 @@ specifiers:
   pinia: ^2.0.23
   primeflex: 3.2.1
   primeicons: 6.0.1
-  primevue: 3.17.0
+  primevue: 3.18.0
   prismjs: 1.29.0
   sass: ^1.55.0
   sass-loader: 13.1.0
@@ -56,7 +61,7 @@ devDependencies:
   nuxt: 3.0.0-rc.12_3eyjpkldgso62bit6zz6w46xwu
   primeflex: 3.2.1
   primeicons: 6.0.1
-  primevue: 3.17.0_kh5bzrfss5xnipkeq4kl6iatom
+  primevue: 3.18.0_kh5bzrfss5xnipkeq4kl6iatom
   prismjs: 1.29.0
   sass: 1.55.0
   sass-loader: 13.1.0_sass@1.55.0+webpack@5.74.0
@@ -668,7 +673,7 @@ packages:
       rollup: 2.79.1
       rollup-plugin-visualizer: 5.8.3_rollup@2.79.1
       ufo: 0.8.6
-      unplugin: 0.10.0
+      unplugin: 0.10.2
       vite: 3.1.8_sass@1.55.0
       vite-node: 0.24.3_sass@1.55.0
       vite-plugin-checker: 0.5.1_a3sem35deylvx5zvkum7dluqum
@@ -905,11 +910,6 @@ packages:
     peerDependencies:
       '@vue/compiler-sfc': '>= 3'
       vue: '>= 3'
-    peerDependenciesMeta:
-      '@vue/compiler-sfc':
-        optional: true
-      vue:
-        optional: true
     dependencies:
       '@babel/runtime': 7.19.4
       '@testing-library/dom': 8.19.0
@@ -4963,7 +4963,7 @@ packages:
       unctx: 2.0.2
       unenv: 0.6.2
       unimport: 0.6.8
-      unplugin: 0.10.0
+      unplugin: 0.10.2
       untyped: 0.5.0
       vue: 3.2.41
       vue-bundle-renderer: 0.4.4
@@ -5634,8 +5634,8 @@ packages:
     resolution: {integrity: sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==}
     dev: true
 
-  /primevue/3.17.0_kh5bzrfss5xnipkeq4kl6iatom:
-    resolution: {integrity: sha512-z7ZCHk4kgkHJ29hg0izN1M8Xst2MOObimq62waE2TDE8ztH9mp2sAdGGsQu1shMa4/23dZ+fcN4t+KpYNICRyQ==}
+  /primevue/3.18.0_kh5bzrfss5xnipkeq4kl6iatom:
+    resolution: {integrity: sha512-7E3BTQRlvdVMh8OXIKqDVHFvF6UrrKacd80drTwiTHgjO98NLWtpDthxByM2z2yooGURx8JJ7GeFoMj8kKrScg==}
     peerDependencies:
       primeicons: '*'
       vue: ^3.0.0
@@ -6553,7 +6553,7 @@ packages:
       acorn: 8.8.0
       estree-walker: 3.0.1
       magic-string: 0.26.7
-      unplugin: 0.9.6
+      unplugin: 0.10.2
     dev: true
 
   /undici/5.11.0:
@@ -6584,7 +6584,7 @@ packages:
       pathe: 0.3.9
       scule: 0.3.2
       strip-literal: 0.4.2
-      unplugin: 0.9.6
+      unplugin: 0.10.2
     dev: true
 
   /unist-util-stringify-position/2.0.3:
@@ -6598,17 +6598,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: true
 
-  /unplugin/0.10.0:
-    resolution: {integrity: sha512-QIoQDNxTceO8QneUMQc96qabJnPVijU9SnaWWAH60HqpkCQSFXTcDAcr8qM4Y7Nq8Q3NafyX3lG5S1g62+KD6g==}
-    dependencies:
-      acorn: 8.8.0
-      chokidar: 3.5.3
-      webpack-sources: 3.2.3
-      webpack-virtual-modules: 0.4.5
-    dev: true
-
-  /unplugin/0.9.6:
-    resolution: {integrity: sha512-YYLtfoNiie/lxswy1GOsKXgnLJTE27la/PeCGznSItk+8METYZErO+zzV9KQ/hXhPwzIJsfJ4s0m1Rl7ZCWZ4Q==}
+  /unplugin/0.10.2:
+    resolution: {integrity: sha512-6rk7GUa4ICYjae5PrAllvcDeuT8pA9+j5J5EkxbMFaV+SalHhxZ7X2dohMzu6C3XzsMT+6jwR/+pwPNR3uK9MA==}
     dependencies:
       acorn: 8.8.0
       chokidar: 3.5.3
@@ -7140,7 +7131,7 @@ time:
   /pinia/2.0.23: '2022-10-08T21:23:51.000Z'
   /primeflex/3.2.1: '2022-05-30T10:51:42.762Z'
   /primeicons/6.0.1: '2022-09-20T19:31:42.015Z'
-  /primevue/3.17.0: '2022-09-08T12:45:53.952Z'
+  /primevue/3.18.0: '2022-10-24T13:15:06.382Z'
   /prismjs/1.29.0: '2022-08-23T10:42:14.395Z'
   /sass-loader/13.1.0: '2022-10-06T21:13:00.953Z'
   /sass/1.55.0: '2022-09-21T22:47:50.235Z'
