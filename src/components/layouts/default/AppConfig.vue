@@ -273,7 +273,7 @@ export default defineComponent({
       return this.$primevue.config.ripple
     },
     inputStyle () {
-      return this.$appState.inputStyle
+      return this.$primevue.config.inputStyle
     }
   },
   watch: {
@@ -289,24 +289,24 @@ export default defineComponent({
   },
   outsideClickListener: null,
   methods: {
-    toggleConfigurator (event) {
+    toggleConfigurator (event: MouseEvent) {
       this.active = !this.active
       event.preventDefault()
 
       if (this.active) { this.bindOutsideClickListener() } else { this.unbindOutsideClickListener() }
     },
-    hideConfigurator (event) {
+    hideConfigurator (event: MouseEvent) {
       this.active = false
       this.unbindOutsideClickListener()
       event.preventDefault()
     },
-    changeInputStyle (value) {
+    changeInputStyle (value: string) {
       this.$primevue.config.inputStyle = value
     },
-    changeRipple (value) {
+    changeRipple (value: boolean) {
       this.$primevue.config.ripple = value
     },
-    changeLayout (event, layoutMode) {
+    changeLayout (event: Event, layoutMode: string) {
       this.$emit('layout-change', layoutMode)
       event.preventDefault()
     },
@@ -326,7 +326,7 @@ export default defineComponent({
         this.outsideClickListener = null
       }
     },
-    isOutsideClicked (event) {
+    isOutsideClicked (event: Event) {
       return !(this.$el.isSameNode(event.target) || this.$el.contains(event.target))
     },
     decrementScale () {

@@ -32,7 +32,7 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
   )()
 
   watch(() => appState.value.theme, (theme) => {
-    useAppTheme(theme)
+    useAppTheme(theme!)
   }, { immediate: true })
 
   return {
@@ -51,5 +51,6 @@ declare module '#app' {
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     $appState: AppState
+    outsideClickListener?: ((event: Event) => void) | null
   }
 }

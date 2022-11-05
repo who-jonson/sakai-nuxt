@@ -5,6 +5,19 @@ import { defineNuxtConfig } from 'nuxt/config'
 const resolvePath = (...paths: string[]) => resolve(fileURLToPath(new URL('./', import.meta.url)), ...paths)
 
 export default defineNuxtConfig({
+
+  app: {
+    head: {
+      meta: [
+        { 'http-equiv': 'x-ua-compatible', content: 'IE=edge' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+      ],
+      link: [
+        { rel: 'icon', href: '/favicon.ico' }
+      ]
+    }
+  },
+
   build: {
     transpile: [
       'chart.js',
@@ -46,16 +59,6 @@ export default defineNuxtConfig({
     addons: {
       vueTemplate: true
     }
-  },
-
-  meta: {
-    meta: [
-      { 'http-equiv': 'x-ua-compatible', content: 'IE=edge' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
-    ],
-    link: [
-      { rel: 'icon', href: '/favicon.ico' }
-    ]
   },
 
   modules: [
