@@ -25,7 +25,7 @@ specifiers:
   eslint-plugin-nuxt: ^4.0.0
   nuxt: ^3.0.0-rc.13
   pinia: ^2.0.23
-  primeflex: 3.2.1
+  primeflex: 3.3.0
   primeicons: 6.0.1
   primevue: 3.18.0
   prismjs: 1.29.0
@@ -59,7 +59,7 @@ devDependencies:
   eslint: 8.26.0
   eslint-plugin-nuxt: 4.0.0_eslint@8.26.0
   nuxt: 3.0.0-rc.13_x7ymwse34hojjouplctfgsi2ma
-  primeflex: 3.2.1
+  primeflex: 3.3.0
   primeicons: 6.0.1
   primevue: 3.18.0_kh5bzrfss5xnipkeq4kl6iatom
   prismjs: 1.29.0
@@ -6099,8 +6099,8 @@ packages:
       react-is: 17.0.2
     dev: true
 
-  /primeflex/3.2.1:
-    resolution: {integrity: sha512-sGDJ4mh2fG19xa1yc4IPGSQ8MUMyu5nU+tYnl27AFuFHhX8XwEA7fWCtWyBbclclVhXtre+Kf9WobWPnfxWAEQ==}
+  /primeflex/3.3.0:
+    resolution: {integrity: sha512-4hvyIO7lERN5bnyURn67Qpozghins8Jq/GSXO6tymc3oa2ADHWuiYBti8ZptPwHu+uD/HTEisS26NEmeIGfPZQ==}
     dev: true
 
   /primeicons/6.0.1:
@@ -7659,7 +7659,7 @@ time:
   /eslint/8.26.0: '2022-10-21T21:02:38.322Z'
   /nuxt/3.0.0-rc.13: '2022-11-04T11:39:07.861Z'
   /pinia/2.0.23: '2022-10-08T21:23:51.000Z'
-  /primeflex/3.2.1: '2022-05-30T10:51:42.762Z'
+  /primeflex/3.3.0: '2022-11-09T11:17:43.501Z'
   /primeicons/6.0.1: '2022-09-20T19:31:42.015Z'
   /primevue/3.18.0: '2022-10-24T13:15:06.382Z'
   /prismjs/1.29.0: '2022-08-23T10:42:14.395Z'

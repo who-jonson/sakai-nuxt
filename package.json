@@ -32,7 +32,7 @@
     "eslint": "^8.26.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "nuxt": "^3.0.0-rc.13",
-    "primeflex": "3.2.1",
+    "primeflex": "3.3.0",
     "primeicons": "6.0.1",
     "primevue": "3.18.0",
     "prismjs": "1.29.0",
