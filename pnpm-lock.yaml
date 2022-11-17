@@ -17,10 +17,9 @@ specifiers:
   '@vueuse/nuxt': ^9.5.0
   '@whoj/eslint-config': ^1.0.2
   '@whoj/utils': ^1.2.1
-  chart.js: 3.9.1
+  chart.js: 4.0.1
   core-js: ^3.26.1
   eslint: ^8.27.0
-  eslint-plugin-nuxt: ^4.0.0
   nuxt: ^3.0.0
   pinia: ^2.0.23
   primeflex: ^3.3.0
@@ -52,10 +51,9 @@ devDependencies:
   '@vueuse/nuxt': 9.5.0_nuxt@3.0.0+vue@3.2.45
   '@whoj/eslint-config': 1.0.2_rmayb2veg2btbq6mbmnyivgasy
   '@whoj/utils': 1.2.1_vue@3.2.45
-  chart.js: 3.9.1
+  chart.js: 4.0.1
   core-js: 3.26.1
   eslint: 8.27.0
-  eslint-plugin-nuxt: 4.0.0_eslint@8.27.0
   nuxt: 3.0.0_6fndr5cicdvx2ahdawzvjugpzu
   primeflex: 3.3.0
   primeicons: 6.0.1
@@ -2284,8 +2282,9 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chart.js/3.9.1:
-    resolution: {integrity: sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==}
+  /chart.js/4.0.1:
+    resolution: {integrity: sha512-5/8/9eBivwBZK81mKvmIwTb2Pmw4D/5h1RK9fBWZLLZ8mCJ+kfYNmV9rMrGoa5Hgy2/wVDBMLSUDudul2/9ihA==}
+    engines: {pnpm: ^7.0.0}
     dev: true
 
   /check-error/1.0.2:
@@ -3667,17 +3666,6 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-nuxt/4.0.0_eslint@8.27.0:
-    resolution: {integrity: sha512-v3Vwdk8YKe52bAz8eSIDqQuTtfL/T1r9dSl1uhC5SyR5pgLxgKkQdxXVf/Bf6Ax7uyd9rHqiAuYVdqqDb7ILdA==}
-    dependencies:
-      eslint-plugin-vue: 9.6.0_eslint@8.27.0
-      semver: 7.3.8
-      vue-eslint-parser: 9.1.0_eslint@8.27.0
-    transitivePeerDependencies:
-      - eslint
-      - supports-color
-    dev: true
-
   /eslint-plugin-promise/6.1.1_eslint@8.27.0:
     resolution: {integrity: sha512-tjqWDwVZQo7UIPMeDReOpUgHCmCiH+ePnVT+5zVapL0uuHnegBUs2smM13CzOs2Xb5+MHMRFTs9v24yjba4Oig==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -3708,24 +3696,6 @@ packages:
       safe-regex: 2.1.1
       semver: 7.3.8
       strip-indent: 3.0.0
-    dev: true
-
-  /eslint-plugin-vue/9.6.0_eslint@8.27.0:
-    resolution: {integrity: sha512-zzySkJgVbFCylnG2+9MDF7N+2Rjze2y0bF8GyUNpFOnT8mCMfqqtLDJkHBuYu9N/psW1A6DVbQhPkP92E+qakA==}
-    engines: {node: ^14.17.0 || >=16.0.0}
-    peerDependencies:
-      eslint: ^6.2.0 || ^7.0.0 || ^8.0.0
-    dependencies:
-      eslint: 8.27.0
-      eslint-utils: 3.0.0_eslint@8.27.0
-      natural-compare: 1.4.0
-      nth-check: 2.1.1
-      postcss-selector-parser: 6.0.10
-      semver: 7.3.8
-      vue-eslint-parser: 9.1.0_eslint@8.27.0
-      xml-name-validator: 4.0.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /eslint-plugin-vue/9.7.0_eslint@8.27.0:
@@ -7921,9 +7891,8 @@ time:
   /@vueuse/nuxt/9.5.0: '2022-11-09T00:23:40.297Z'
   /@whoj/eslint-config/1.0.2: '2022-11-15T00:18:53.354Z'
   /@whoj/utils/1.2.1: '2022-11-16T02:41:09.784Z'
-  /chart.js/3.9.1: '2022-08-03T12:51:30.873Z'
+  /chart.js/4.0.1: '2022-11-14T23:30:27.673Z'
   /core-js/3.26.1: '2022-11-13T18:12:09.473Z'
-  /eslint-plugin-nuxt/4.0.0: '2022-08-31T15:12:35.541Z'
   /eslint/8.27.0: '2022-11-06T06:19:59.181Z'
   /nuxt/3.0.0: '2022-11-16T15:01:13.539Z'
   /pinia/2.0.23: '2022-10-08T21:23:51.000Z'

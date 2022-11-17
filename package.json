@@ -28,7 +28,7 @@
     "@vueuse/nuxt": "^9.5.0",
     "@whoj/eslint-config": "^1.0.2",
     "@whoj/utils": "^1.2.1",
-    "chart.js": "3.9.1",
+    "chart.js": "4.0.1",
     "core-js": "^3.26.1",
     "eslint": "^8.27.0",
     "nuxt": "^3.0.0",
