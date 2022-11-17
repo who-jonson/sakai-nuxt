@@ -1,3 +1,13 @@
+<script lang="ts">
+export default {
+  methods: {
+    onUpload() {
+      this.$toast.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded', life: 3000 });
+    }
+  }
+};
+</script>
+
 <template>
   <div class="grid">
     <div class="col-12">
@@ -25,13 +35,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-export default {
-  methods: {
-    onUpload () {
-      this.$toast.add({ severity: 'info', summary: 'Success', detail: 'File Uploaded', life: 3000 })
-    }
-  }
-}
-</script>

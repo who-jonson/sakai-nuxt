@@ -1,3 +1,25 @@
+<script lang="ts">
+export default {
+  emits: ['topbar-menu-toggle', 'menu-toggle'],
+  computed: {
+    darkTheme() {
+      return this.$appState.darkTheme;
+    }
+  },
+  methods: {
+    onMenuToggle(event) {
+      this.$emit('menu-toggle', event);
+    },
+    onTopbarMenuToggle(event) {
+      this.$emit('topbar-menu-toggle', event);
+    },
+    topbarImage() {
+      return this.$appState.darkTheme ? '/images/logo-white.svg' : '/images/logo-dark.svg';
+    }
+  }
+};
+</script>
+
 <template>
   <div class="layout-topbar">
     <NuxtLink to="/" class="layout-topbar-logo">
@@ -9,8 +31,14 @@
     </button>
 
     <button
-      v-styleclass="{ selector: '@next', enterClass: 'hidden', enterActiveClass: 'scalein',
-                      leaveToClass: 'hidden', leaveActiveClass: 'fadeout', hideOnOutsideClick: true}"
+      v-styleclass="{
+        selector: '@next',
+        enterClass: 'hidden',
+        enterActiveClass: 'scalein',
+        leaveToClass: 'hidden',
+        leaveActiveClass: 'fadeout',
+        hideOnOutsideClick: true
+      }"
       class="p-link layout-topbar-menu-button layout-topbar-button"
     >
       <i class="pi pi-ellipsis-v" />
@@ -37,25 +65,3 @@
     </ul>
   </div>
 </template>
-
-<script lang="ts">
-export default {
-  emits: ['topbar-menu-toggle', 'menu-toggle'],
-  computed: {
-    darkTheme () {
-      return this.$appState.darkTheme
-    }
-  },
-  methods: {
-    onMenuToggle (event) {
-      this.$emit('menu-toggle', event)
-    },
-    onTopbarMenuToggle (event) {
-      this.$emit('topbar-menu-toggle', event)
-    },
-    topbarImage () {
-      return this.$appState.darkTheme ? '/images/logo-white.svg' : '/images/logo-dark.svg'
-    }
-  }
-}
-</script>

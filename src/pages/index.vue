@@ -1,3 +1,51 @@
+<script lang="ts" setup>
+import ProductService from '~~/services/ProductService';
+
+const productService = new ProductService();
+
+useHead({
+  title: 'Dashboard'
+});
+
+const products = ref([]);
+const items = ref([
+  { label: 'Add New', icon: 'pi pi-fw pi-plus' },
+  { label: 'Remove', icon: 'pi pi-fw pi-minus' }
+]);
+const lineData = ref({
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  datasets: [
+    {
+      label: 'Revenue',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      fill: false,
+      backgroundColor: '#2f4860',
+      borderColor: '#2f4860',
+      tension: 0.4
+    },
+    {
+      label: 'Sales',
+      data: [28, 48, 40, 19, 86, 27, 90],
+      fill: false,
+      backgroundColor: '#00bb7e',
+      borderColor: '#00bb7e',
+      tension: 0.4
+    }
+  ]
+});
+
+function formatCurrency(value) {
+  // @ts-ignore
+  return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+}
+
+onMounted(() => {
+  productService.getProductsSmall().then((data) => {
+    products.value = data;
+  });
+});
+</script>
+
 <template>
   <div class="grid">
     <div class="col-12 lg:col-6 xl:col-3">
@@ -78,7 +126,7 @@
               Image
             </template>
             <template #body="slotProps">
-              <img :src="'/images/product/' + slotProps.data.image" :alt="slotProps.data.image" width="50" class="shadow-2">
+              <img :src="`/images/product/${slotProps.data.image}`" :alt="slotProps.data.image" width="50" class="shadow-2">
             </template>
           </Column>
           <Column field="name" header="Name" :sortable="true" style="width:35%" />
@@ -252,51 +300,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import ProductService from '~~/services/ProductService'
-
-const productService = new ProductService()
-
-useHead({
-  title: 'Dashboard'
-})
-
-const products = ref([])
-const items = ref([
-  { label: 'Add New', icon: 'pi pi-fw pi-plus' },
-  { label: 'Remove', icon: 'pi pi-fw pi-minus' }
-])
-const lineData = ref({
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-  datasets: [
-    {
-      label: 'Revenue',
-      data: [65, 59, 80, 81, 56, 55, 40],
-      fill: false,
-      backgroundColor: '#2f4860',
-      borderColor: '#2f4860',
-      tension: 0.4
-    },
-    {
-      label: 'Sales',
-      data: [28, 48, 40, 19, 86, 27, 90],
-      fill: false,
-      backgroundColor: '#00bb7e',
-      borderColor: '#00bb7e',
-      tension: 0.4
-    }
-  ]
-})
-
-function formatCurrency (value) {
-  // @ts-ignore
-  return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
-}
-
-onMounted(() => {
-  productService.getProductsSmall().then((data) => {
-    products.value = data
-  })
-})
-</script>

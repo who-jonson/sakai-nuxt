@@ -1,4 +1,5 @@
 {
+  "name": "sakai-nuxt",
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
@@ -14,9 +15,9 @@
     "pinia": "^2.0.23"
   },
   "devDependencies": {
-    "@nuxt/test-utils": "^3.0.0-rc.13",
-    "@nuxtjs/eslint-config-typescript": "^11.0.0",
-    "@pinia/nuxt": "^0.4.3",
+    "@nuxt/test-utils": "^3.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@pinia/nuxt": "^0.4.4",
     "@pinia/testing": "^0.0.14",
     "@testing-library/vue": "latest",
     "@types/node": "^18.11.9",
@@ -25,30 +26,27 @@
     "@vueuse/components": "^9.5.0",
     "@vueuse/core": "^9.5.0",
     "@vueuse/nuxt": "^9.5.0",
-    "@whoj/eslint-config": "^1.0.1",
-    "@whoj/utils": "^1.0.0",
+    "@whoj/eslint-config": "^1.0.2",
+    "@whoj/utils": "^1.2.1",
     "chart.js": "3.9.1",
     "core-js": "^3.26.1",
     "eslint": "^8.27.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "nuxt": "^3.0.0-rc.13",
+    "nuxt": "^3.0.0",
     "primeflex": "^3.3.0",
     "primeicons": "6.0.1",
     "primevue": "^3.18.1",
     "prismjs": "1.29.0",
-    "sass": "^1.56.0",
+    "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
     "typescript": "^4.8.4",
-    "vite": "^3.2.3",
-    "vitest": "^0.25.0",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.2",
     "vue": "^3.2.45",
     "webpack": "^5.75.0"
   },
   "pnpm": {
     "overrides": {
-      "unplugin": "latest",
-      "@typescript-eslint/parser": "^5.36.1",
-      "@typescript-eslint/typescript-estree": "^5.36.1"
+      "unplugin": "latest"
     },
     "peerDependencyRules": {
       "allowAny": [
@@ -56,8 +54,16 @@
       ]
     }
   },
-  "packageManager": "pnpm@7.16.0",
+  "packageManager": "pnpm@7.16.1",
   "engines": {
     "node": "^14.20 || >=16.18"
+  },
+  "homepage": "https://github.com/who-jonson/sakai-nuxt#readme",
+  "repository": {
+    "url": "https://github.com/who-jonson/sakai-nuxt",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/who-jonson/sakai-nuxt/issues"
   }
 }

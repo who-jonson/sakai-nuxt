@@ -1,3 +1,40 @@
+<script lang="ts">
+export default {
+  data() {
+    return {
+      message: [],
+      username: null,
+      email: null
+    };
+  },
+  methods: {
+    addMessage(type) {
+      if (type === 'success') {
+        this.message = [{ severity: 'success', detail: 'Success Message', content: 'Message sent', id: this.count++ }];
+      } else if (type === 'info') {
+        this.message = [{ severity: 'info', detail: 'Info Message', content: 'PrimeVue rocks', id: this.count++ }];
+      } else if (type === 'warn') {
+        this.message = [{ severity: 'warn', detail: 'Warn Message', content: 'There are unsaved changes', id: this.count++ }];
+      } else if (type === 'error') {
+        this.message = [{ severity: 'error', detail: 'Error Message', content: 'Validation failed', id: this.count++ }];
+      }
+    },
+    showSuccess() {
+      this.$toast.add({ severity: 'success', summary: 'Success Message', detail: 'Message Detail', life: 3000 });
+    },
+    showInfo() {
+      this.$toast.add({ severity: 'info', summary: 'Info Message', detail: 'Message Detail', life: 3000 });
+    },
+    showWarn() {
+      this.$toast.add({ severity: 'warn', summary: 'Warn Message', detail: 'Message Detail', life: 3000 });
+    },
+    showError() {
+      this.$toast.add({ severity: 'error', summary: 'Error Message', detail: 'Message Detail', life: 3000 });
+    }
+  }
+};
+</script>
+
 <template>
   <div class="grid messages-demo">
     <div class="col-12 lg:col-6">
@@ -61,40 +98,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-export default {
-  data () {
-    return {
-      message: [],
-      username: null,
-      email: null
-    }
-  },
-  methods: {
-    addMessage (type) {
-      if (type === 'success') {
-        this.message = [{ severity: 'success', detail: 'Success Message', content: 'Message sent', id: this.count++ }]
-      } else if (type === 'info') {
-        this.message = [{ severity: 'info', detail: 'Info Message', content: 'PrimeVue rocks', id: this.count++ }]
-      } else if (type === 'warn') {
-        this.message = [{ severity: 'warn', detail: 'Warn Message', content: 'There are unsaved changes', id: this.count++ }]
-      } else if (type === 'error') {
-        this.message = [{ severity: 'error', detail: 'Error Message', content: 'Validation failed', id: this.count++ }]
-      }
-    },
-    showSuccess () {
-      this.$toast.add({ severity: 'success', summary: 'Success Message', detail: 'Message Detail', life: 3000 })
-    },
-    showInfo () {
-      this.$toast.add({ severity: 'info', summary: 'Info Message', detail: 'Message Detail', life: 3000 })
-    },
-    showWarn () {
-      this.$toast.add({ severity: 'warn', summary: 'Warn Message', detail: 'Message Detail', life: 3000 })
-    },
-    showError () {
-      this.$toast.add({ severity: 'error', summary: 'Error Message', detail: 'Message Detail', life: 3000 })
-    }
-  }
-}
-</script>

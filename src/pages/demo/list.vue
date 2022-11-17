@@ -1,3 +1,64 @@
+<script lang="ts">
+import ProductService from '~~/services/ProductService';
+
+export default {
+  data() {
+    return {
+      picklistValue: [[
+        { name: 'San Francisco', code: 'SF' },
+        { name: 'London', code: 'LDN' },
+        { name: 'Paris', code: 'PRS' },
+        { name: 'Istanbul', code: 'IST' },
+        { name: 'Berlin', code: 'BRL' },
+        { name: 'Barcelona', code: 'BRC' },
+        { name: 'Rome', code: 'RM' }
+      ], []],
+      orderlistValue: [
+        { name: 'San Francisco', code: 'SF' },
+        { name: 'London', code: 'LDN' },
+        { name: 'Paris', code: 'PRS' },
+        { name: 'Istanbul', code: 'IST' },
+        { name: 'Berlin', code: 'BRL' },
+        { name: 'Barcelona', code: 'BRC' },
+        { name: 'Rome', code: 'RM' }
+      ],
+      dataviewValue: null,
+      layout: 'grid',
+      sortKey: null,
+      sortOrder: null,
+      sortField: null,
+      sortOptions: [
+        { label: 'Price High to Low', value: '!price' },
+        { label: 'Price Low to High', value: 'price' }
+      ]
+    };
+  },
+  productService: null,
+  created() {
+    this.productService = new ProductService();
+  },
+  mounted() {
+    this.productService.getProducts().then(data => this.dataviewValue = data);
+  },
+  methods: {
+    onSortChange(event) {
+      const value = event.value.value;
+      const sortValue = event.value;
+
+      if (value.indexOf('!') === 0) {
+        this.sortOrder = -1;
+        this.sortField = value.substring(1, value.length);
+        this.sortKey = sortValue;
+      } else {
+        this.sortOrder = 1;
+        this.sortField = value;
+        this.sortKey = sortValue;
+      }
+    }
+  }
+};
+</script>
+
 <template>
   <div class="grid">
     <div class="col-12">
@@ -15,7 +76,11 @@
             <div class="grid nogutter">
               <div class="col-6 text-left">
                 <ClientOnly>
-                  <Dropdown v-model="sortKey" :options="sortOptions" option-label="label" placeholder="Sort By Price" @change="onSortChange($event)" />
+                  <Dropdown
+                    v-model="sortKey" :options="sortOptions" option-label="label"
+                    placeholder="Sort By Price"
+                    @change="onSortChange($event)"
+                  />
                 </ClientOnly>
               </div>
               <div class="col-6 text-right">
@@ -27,7 +92,7 @@
           <template #list="slotProps">
             <div class="col-12">
               <div class="product-list-item">
-                <img :src="'/images/product/' + slotProps.data.image" :alt="slotProps.data.name">
+                <img :src="`/images/product/${slotProps.data.image}`" :alt="slotProps.data.name">
                 <div class="product-list-detail">
                   <div class="product-name">
                     {{ slotProps.data.name }}
@@ -41,7 +106,7 @@
                 <div class="product-list-action">
                   <span class="product-price">${{ slotProps.data.price }}</span>
                   <Button icon="pi pi-shopping-cart" label="Add to Cart" :disabled="slotProps.data.inventoryStatus === 'OUTOFSTOCK'" />
-                  <span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{ slotProps.data.inventoryStatus }}</span>
+                  <span :class="`product-badge status-${slotProps.data.inventoryStatus.toLowerCase()}`">{{ slotProps.data.inventoryStatus }}</span>
                 </div>
               </div>
             </div>
@@ -55,10 +120,10 @@
                     <i class="pi pi-tag mr-2" />
                     <span class="font-semibold">{{ slotProps.data.category }}</span>
                   </div>
-                  <span :class="'product-badge status-'+slotProps.data.inventoryStatus.toLowerCase()">{{ slotProps.data.inventoryStatus }}</span>
+                  <span :class="`product-badge status-${slotProps.data.inventoryStatus.toLowerCase()}`">{{ slotProps.data.inventoryStatus }}</span>
                 </div>
                 <div class="text-center">
-                  <img :src="'/images/product/' + slotProps.data.image" :alt="slotProps.data.name" class="w-9 shadow-2 my-3 mx-0">
+                  <img :src="`/images/product/${slotProps.data.image}`" :alt="slotProps.data.name" class="w-9 shadow-2 my-3 mx-0">
                   <div class="text-2xl font-bold">
                     {{ slotProps.data.name }}
                   </div>
@@ -98,7 +163,11 @@
     <div class="col-12 lg:col-4">
       <div class="card">
         <h5>OrderList</h5>
-        <OrderList v-model="orderlistValue" list-style="height:auto" data-key="code" class="p-orderlist-responsive" :rows="10">
+        <OrderList
+          v-model="orderlistValue" list-style="height:auto" data-key="code"
+          class="p-orderlist-responsive"
+          :rows="10"
+        >
           <template #header>
             Cities
           </template>
@@ -110,67 +179,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import ProductService from '~~/services/ProductService'
-
-export default {
-  data () {
-    return {
-      picklistValue: [[
-        { name: 'San Francisco', code: 'SF' },
-        { name: 'London', code: 'LDN' },
-        { name: 'Paris', code: 'PRS' },
-        { name: 'Istanbul', code: 'IST' },
-        { name: 'Berlin', code: 'BRL' },
-        { name: 'Barcelona', code: 'BRC' },
-        { name: 'Rome', code: 'RM' }
-      ], []],
-      orderlistValue: [
-        { name: 'San Francisco', code: 'SF' },
-        { name: 'London', code: 'LDN' },
-        { name: 'Paris', code: 'PRS' },
-        { name: 'Istanbul', code: 'IST' },
-        { name: 'Berlin', code: 'BRL' },
-        { name: 'Barcelona', code: 'BRC' },
-        { name: 'Rome', code: 'RM' }
-      ],
-      dataviewValue: null,
-      layout: 'grid',
-      sortKey: null,
-      sortOrder: null,
-      sortField: null,
-      sortOptions: [
-        { label: 'Price High to Low', value: '!price' },
-        { label: 'Price Low to High', value: 'price' }
-      ]
-    }
-  },
-  productService: null,
-  created () {
-    this.productService = new ProductService()
-  },
-  mounted () {
-    this.productService.getProducts().then(data => this.dataviewValue = data)
-  },
-  methods: {
-    onSortChange (event) {
-      const value = event.value.value
-      const sortValue = event.value
-
-      if (value.indexOf('!') === 0) {
-        this.sortOrder = -1
-        this.sortField = value.substring(1, value.length)
-        this.sortKey = sortValue
-      } else {
-        this.sortOrder = 1
-        this.sortField = value
-        this.sortKey = sortValue
-      }
-    }
-  }
-}
-</script>
 
 <style scoped lang="scss">
 .product-name {

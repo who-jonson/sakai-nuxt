@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitest/config'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
+import { defineConfig } from 'vitest/config';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 
 export default defineConfig({
   plugins: [
@@ -10,4 +10,4 @@ export default defineConfig({
     vueJsx()
   ],
   test: {}
-})
+});

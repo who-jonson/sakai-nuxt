@@ -1,3 +1,19 @@
+<script lang="ts">
+export default {
+  data() {
+    return {
+      expanded: false
+    };
+  },
+  methods: {
+    onClick(event) {
+      this.expanded = !this.expanded;
+      event.preventDefault();
+    }
+  }
+};
+</script>
+
 <template>
   <div class="layout-profile">
     <div>
@@ -28,22 +44,6 @@
     </transition>
   </div>
 </template>
-
-<script lang="ts">
-export default {
-  data () {
-    return {
-      expanded: false
-    }
-  },
-  methods: {
-    onClick (event) {
-      this.expanded = !this.expanded
-      event.preventDefault()
-    }
-  }
-}
-</script>
 
 <style scoped>
 

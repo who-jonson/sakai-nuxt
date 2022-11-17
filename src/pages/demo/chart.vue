@@ -1,43 +1,6 @@
-<template>
-  <div class="grid p-fluid">
-    <div class="col-12 lg:col-6">
-      <div class="card">
-        <h5>Linear Chart</h5>
-        <Chart type="line" :data="lineData" />
-      </div>
-
-      <div class="card flex flex-column align-items-center">
-        <h5>Pie Chart</h5>
-        <Chart type="pie" :data="pieData" style="width: 50%" />
-      </div>
-
-      <div class="card  flex flex-column align-items-center">
-        <h5>Polar Area Chart</h5>
-        <Chart type="polarArea" :data="polarData" style="width: 50%" />
-      </div>
-    </div>
-    <div class="col-12 lg:col-6">
-      <div class="card">
-        <h5>Bar Chart</h5>
-        <Chart type="bar" :data="barData" />
-      </div>
-
-      <div class="card flex flex-column align-items-center">
-        <h5>Doughnut Chart</h5>
-        <Chart type="doughnut" :data="doughnutData" style="width: 50%" />
-      </div>
-
-      <div class="card flex flex-column align-items-center">
-        <h5>Radar Chart</h5>
-        <Chart type="radar" :data="radarData" style="width: 50%" />
-      </div>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 export default {
-  data () {
+  data() {
     return {
       lineData: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -162,7 +125,44 @@ export default {
           }
         ]
       }
-    }
+    };
   }
-}
+};
 </script>
+
+<template>
+  <div class="grid p-fluid">
+    <div class="col-12 lg:col-6">
+      <div class="card">
+        <h5>Linear Chart</h5>
+        <Chart type="line" :data="lineData" />
+      </div>
+
+      <div class="card flex flex-column align-items-center">
+        <h5>Pie Chart</h5>
+        <Chart type="pie" :data="pieData" style="width: 50%" />
+      </div>
+
+      <div class="card  flex flex-column align-items-center">
+        <h5>Polar Area Chart</h5>
+        <Chart type="polarArea" :data="polarData" style="width: 50%" />
+      </div>
+    </div>
+    <div class="col-12 lg:col-6">
+      <div class="card">
+        <h5>Bar Chart</h5>
+        <Chart type="bar" :data="barData" />
+      </div>
+
+      <div class="card flex flex-column align-items-center">
+        <h5>Doughnut Chart</h5>
+        <Chart type="doughnut" :data="doughnutData" style="width: 50%" />
+      </div>
+
+      <div class="card flex flex-column align-items-center">
+        <h5>Radar Chart</h5>
+        <Chart type="radar" :data="radarData" style="width: 50%" />
+      </div>
+    </div>
+  </div>
+</template>

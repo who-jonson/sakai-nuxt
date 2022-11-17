@@ -1,15 +1,15 @@
-import { fileURLToPath } from 'url'
-import { resolve } from 'pathe'
-import { defineNuxtConfig } from 'nuxt/config'
+import { fileURLToPath } from 'url';
+import { resolve } from 'pathe';
+import { defineNuxtConfig } from 'nuxt/config';
 
-const resolvePath = (...paths: string[]) => resolve(fileURLToPath(new URL('./', import.meta.url)), ...paths)
+const resolvePath = (...paths: string[]) => resolve(fileURLToPath(new URL('./', import.meta.url)), ...paths);
 
 export default defineNuxtConfig({
 
   app: {
     head: {
       meta: [
-        { 'http-equiv': 'x-ua-compatible', content: 'IE=edge' },
+        { 'http-equiv': 'x-ua-compatible', 'content': 'IE=edge' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
       ],
       link: [
@@ -80,4 +80,4 @@ export default defineNuxtConfig({
     clearScreen: true,
     logLevel: 'info'
   }
-})
+});

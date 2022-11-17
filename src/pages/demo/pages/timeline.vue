@@ -1,55 +1,6 @@
-<template>
-  <div class="grid">
-    <div class="col-12">
-      <div class="card">
-        <h4>Timeline</h4>
-
-        <h5>Custom Timeline</h5>
-        <Timeline :value="customEvents" align="alternate" class="customized-timeline">
-          <template #marker="slotProps">
-            <span class="custom-marker shadow-2" :style="{backgroundColor: slotProps.item.color}">
-              <i :class="slotProps.item.icon" />
-            </span>
-          </template>
-          <template #content="slotProps">
-            <Card>
-              <template #title>
-                {{ slotProps.item.status }}
-              </template>
-              <template #subtitle>
-                {{ slotProps.item.date }}
-              </template>
-              <template #content>
-                <img v-if="slotProps.item.image" :src="'/images/product/' + slotProps.item.image" :alt="slotProps.item.name" width="200" class="shadow-2">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-                  quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-                </p>
-                <Button label="Read more" class="p-button-text" />
-              </template>
-            </Card>
-          </template>
-        </Timeline>
-
-        <h5 style="margin-top: 5em">
-          Horizontal - Alternate Align
-        </h5>
-        <Timeline :value="horizontalEvents" layout="horizontal" align="alternate">
-          <template #content="slotProps">
-            {{ slotProps.item }}
-          </template>
-          <template #opposite>
-                    &nbsp;
-          </template>
-        </Timeline>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script lang="ts">
 export default {
-  data () {
+  data() {
     return {
       customEvents: [
         {
@@ -81,10 +32,63 @@ export default {
       horizontalEvents: [
         '2020', '2021', '2022', '2023'
       ]
-    }
+    };
   }
-}
+};
 </script>
+
+<template>
+  <div class="grid">
+    <div class="col-12">
+      <div class="card">
+        <h4>Timeline</h4>
+
+        <h5>Custom Timeline</h5>
+        <Timeline :value="customEvents" align="alternate" class="customized-timeline">
+          <template #marker="slotProps">
+            <span class="custom-marker shadow-2" :style="{ backgroundColor: slotProps.item.color }">
+              <i :class="slotProps.item.icon" />
+            </span>
+          </template>
+          <template #content="slotProps">
+            <Card>
+              <template #title>
+                {{ slotProps.item.status }}
+              </template>
+              <template #subtitle>
+                {{ slotProps.item.date }}
+              </template>
+              <template #content>
+                <img
+                  v-if="slotProps.item.image" :src="`/images/product/${slotProps.item.image}`" :alt="slotProps.item.name"
+                  width="200"
+                  class="shadow-2"
+                >
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                  quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
+                </p>
+                <Button label="Read more" class="p-button-text" />
+              </template>
+            </Card>
+          </template>
+        </Timeline>
+
+        <h5 style="margin-top: 5em">
+          Horizontal - Alternate Align
+        </h5>
+        <Timeline :value="horizontalEvents" layout="horizontal" align="alternate">
+          <template #content="slotProps">
+            {{ slotProps.item }}
+          </template>
+          <template #opposite>
+                    &nbsp;
+          </template>
+        </Timeline>
+      </div>
+    </div>
+  </div>
+</template>
 
 <style lang="scss" scoped>
 .custom-marker {
@@ -125,5 +129,4 @@ export default {
         }
     }
 }
-
 </style>

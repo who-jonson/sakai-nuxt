@@ -1,3 +1,53 @@
+<script lang="ts">
+import CountryService from '~~/services/CountryService';
+
+export default {
+  data() {
+    return {
+      countries: null,
+      filteredCountries: null,
+      cities: [
+        { name: 'New York', code: 'NY' },
+        { name: 'Rome', code: 'RM' },
+        { name: 'London', code: 'LDN' },
+        { name: 'Istanbul', code: 'IST' },
+        { name: 'Paris', code: 'PRS' }
+      ],
+      value1: null,
+      value2: null,
+      value3: null,
+      value4: null,
+      value5: null,
+      value6: null,
+      value7: null,
+      value8: null,
+      value9: null,
+      value10: null
+    };
+  },
+  countryService: null,
+  created() {
+    this.countryService = new CountryService();
+  },
+  mounted() {
+    this.countryService.getCountries().then(data => this.countries = data);
+  },
+  methods: {
+    searchCountry(event) {
+      setTimeout(() => {
+        if (!event.query.trim().length) {
+          this.filteredCountries = [...this.countries];
+        } else {
+          this.filteredCountries = this.countries.filter((country) => {
+            return country.name.toLowerCase().startsWith(event.query.toLowerCase());
+          });
+        }
+      }, 250);
+    }
+  }
+};
+</script>
+
 <template>
   <div class="grid p-fluid">
     <div class="col">
@@ -37,7 +87,11 @@
           <div class="col-12 md:col-6">
             <div class="field">
               <label for="inputmask">InputMask</label>
-              <InputMask id="inputmask" v-model="value5" mask="99/99/9999" slot-char="mm/dd/yyyy" class="p-invalid" />
+              <InputMask
+                id="inputmask" v-model="value5" mask="99/99/9999"
+                slot-char="mm/dd/yyyy"
+                class="p-invalid"
+              />
             </div>
             <div class="field">
               <label for="inputnumber">InputNumber</label>
@@ -45,11 +99,19 @@
             </div>
             <div class="field">
               <label for="dropdown">Dropdown</label>
-              <Dropdown id="dropdown" v-model="value7" :options="cities" option-label="name" class="p-invalid" />
+              <Dropdown
+                id="dropdown" v-model="value7" :options="cities"
+                option-label="name"
+                class="p-invalid"
+              />
             </div>
             <div class="field">
               <label for="multiselect">MultiSelect</label>
-              <MultiSelect id="multiselect" v-model="value8" :options="cities" option-label="name" class="p-invalid" />
+              <MultiSelect
+                id="multiselect" v-model="value8" :options="cities"
+                option-label="name"
+                class="p-invalid"
+              />
             </div>
             <div class="field">
               <label for="textarea">Textarea</label>
@@ -61,53 +123,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import CountryService from '~~/services/CountryService'
-
-export default {
-  data () {
-    return {
-      countries: null,
-      filteredCountries: null,
-      cities: [
-        { name: 'New York', code: 'NY' },
-        { name: 'Rome', code: 'RM' },
-        { name: 'London', code: 'LDN' },
-        { name: 'Istanbul', code: 'IST' },
-        { name: 'Paris', code: 'PRS' }
-      ],
-      value1: null,
-      value2: null,
-      value3: null,
-      value4: null,
-      value5: null,
-      value6: null,
-      value7: null,
-      value8: null,
-      value9: null,
-      value10: null
-    }
-  },
-  countryService: null,
-  created () {
-    this.countryService = new CountryService()
-  },
-  mounted () {
-    this.countryService.getCountries().then(data => this.countries = data)
-  },
-  methods: {
-    searchCountry (event) {
-      setTimeout(() => {
-        if (!event.query.trim().length) {
-          this.filteredCountries = [...this.countries]
-        } else {
-          this.filteredCountries = this.countries.filter((country) => {
-            return country.name.toLowerCase().startsWith(event.query.toLowerCase())
-          })
-        }
-      }, 250)
-    }
-  }
-}
-</script>

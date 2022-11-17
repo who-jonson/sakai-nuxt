@@ -1,3 +1,26 @@
+<script lang="ts">
+import NodeService from '~~/services/NodeService';
+
+export default {
+  data() {
+    return {
+      treeValue: null,
+      selectedTreeValue: null,
+      treeTableValue: null,
+      selectedTreeTableValue: null
+    };
+  },
+  nodeService: null,
+  created() {
+    this.nodeService = new NodeService();
+  },
+  mounted() {
+    this.nodeService.getTreeNodes().then(data => this.treeValue = data);
+    this.nodeService.getTreeTableNodes().then(data => this.treeTableValue = data);
+  }
+};
+</script>
+
 <template>
   <div class="grid">
     <div class="col-12">
@@ -21,26 +44,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import NodeService from '~~/services/NodeService'
-
-export default {
-  data () {
-    return {
-      treeValue: null,
-      selectedTreeValue: null,
-      treeTableValue: null,
-      selectedTreeTableValue: null
-    }
-  },
-  nodeService: null,
-  created () {
-    this.nodeService = new NodeService()
-  },
-  mounted () {
-    this.nodeService.getTreeNodes().then(data => this.treeValue = data)
-    this.nodeService.getTreeTableNodes().then(data => this.treeTableValue = data)
-  }
-}
-</script>
