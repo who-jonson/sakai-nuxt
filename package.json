@@ -12,39 +12,42 @@
     "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
-    "pinia": "^2.0.23"
+    "pinia": "^2.0.26"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@pinia/nuxt": "^0.4.4",
+    "@pinia/nuxt": "^0.4.5",
     "@pinia/testing": "^0.0.14",
     "@testing-library/vue": "latest",
     "@types/node": "^18.11.9",
     "@types/serialize-javascript": "^5.0.2",
     "@vue/compiler-sfc": "^3.2.45",
-    "@vueuse/components": "^9.5.0",
-    "@vueuse/core": "^9.5.0",
-    "@vueuse/nuxt": "^9.5.0",
+    "@vueuse/components": "^9.6.0",
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
     "@whoj/eslint-config": "^1.0.2",
     "@whoj/utils": "^1.2.1",
     "chart.js": "3.9.1",
     "core-js": "^3.26.1",
-    "eslint": "^8.27.0",
+    "eslint": "^8.28.0",
     "nuxt": "^3.0.0",
     "primeflex": "^3.3.0",
     "primeicons": "6.0.1",
-    "primevue": "^3.18.1",
+    "primevue": "^3.20.0",
     "prismjs": "1.29.0",
     "sass": "^1.56.1",
     "sass-loader": "^13.2.0",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.3",
     "vite": "^3.2.4",
-    "vitest": "^0.25.2",
+    "vitest": "^0.25.3",
     "vue": "^3.2.45",
     "webpack": "^5.75.0"
   },
   "pnpm": {
+    "allowedDeprecatedVersions": {
+      "stable": "*"
+    },
     "overrides": {
       "unplugin": "latest"
     },
