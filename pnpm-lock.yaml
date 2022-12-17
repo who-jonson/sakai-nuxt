@@ -18,7 +18,7 @@ specifiers:
   '@vueuse/nuxt': ^9.6.0
   '@whoj/eslint-config': ^1.0.2
   '@whoj/utils': ^1.2.1
-  chart.js: 3.9.1
+  chart.js: 4.1.1
   core-js: ^3.26.1
   eslint: ^8.28.0
   nuxt: ^3.0.0
@@ -51,7 +51,7 @@ devDependencies:
   '@vueuse/nuxt': 9.6.0_nuxt@3.0.0+vue@3.2.45
   '@whoj/eslint-config': 1.0.2_ha6vam6werchizxrnqvarmz2zu
   '@whoj/utils': 1.2.1_vue@3.2.45
-  chart.js: 3.9.1
+  chart.js: 4.1.1
   core-js: 3.26.1
   eslint: 8.29.0
   nuxt: 3.0.0_dgknlxxo2uxpo73krz6ht5ofxq
@@ -655,6 +655,10 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@kurkle/color/0.3.1:
+    resolution: {integrity: sha512-hW0GwZj06z/ZFUW2Espl7toVDjghJN+EKqyXzPSV8NV89d5BYp5rRMBJoc+aUN0x5OXDMeRQHazejr2Xmqj2tw==}
     dev: true
 
   /@mapbox/node-pre-gyp/1.0.10:
@@ -1421,7 +1425,7 @@ packages:
     resolution: {integrity: sha512-JgDhxstQlwnHBvZ1BSnU5mbmyQ14/t5JhREc6YH5kWyu2QdAAOsLF6xgHoIWarj8tddaiwFrNzLbWJPudpXKYA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: '*'
+      vite: ^3.0.0
       vue: ^3.0.0
     dependencies:
       '@babel/core': 7.20.5
@@ -1437,7 +1441,7 @@ packages:
     resolution: {integrity: sha512-E0tnaL4fr+qkdCNxJ+Xd0yM31UwMkQje76fsDVBBUCoGOUPexu2VDUYHL8P4CwV+zMvWw6nlRw19OnRKmYAJpw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: '*'
+      vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
       vite: 3.2.5_73lfsi4xmmmu3zhcuv45qpgb6a
@@ -2286,8 +2290,11 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chart.js/3.9.1:
-    resolution: {integrity: sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==}
+  /chart.js/4.1.1:
+    resolution: {integrity: sha512-P0pCosNXp+LR8zO/QTkZKT6Hb7p0DPFtypEeVOf+6x06hX13NIb75R0DXUA4Ksx/+48chDQKtCCmRCviQRTqsA==}
+    engines: {pnpm: ^7.0.0}
+    dependencies:
+      '@kurkle/color': 0.3.1
     dev: true
 
   /check-error/1.0.2:
@@ -6878,7 +6885,7 @@ packages:
     peerDependencies:
       eslint: '>=7'
       typescript: '*'
-      vite: '*'
+      vite: ^2.0.0 || ^3.0.0-0
       vls: '*'
       vti: '*'
     peerDependenciesMeta:
