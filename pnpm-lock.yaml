@@ -30,7 +30,7 @@ specifiers:
   sass: ^1.56.1
   sass-loader: ^13.2.0
   typescript: ^4.9.3
-  vitest: ^0.25.3
+  vitest: ^0.26.0
   vue: ^3.2.45
   webpack: ^5.75.0
 
@@ -62,7 +62,7 @@ devDependencies:
   sass: 1.56.2
   sass-loader: 13.2.0_sass@1.56.2+webpack@5.75.0
   typescript: 4.9.4
-  vitest: 0.25.6_sass@1.56.2
+  vitest: 0.26.0_sass@1.56.2
   vue: 3.2.45
   webpack: 5.75.0
 
@@ -1421,7 +1421,7 @@ packages:
     resolution: {integrity: sha512-JgDhxstQlwnHBvZ1BSnU5mbmyQ14/t5JhREc6YH5kWyu2QdAAOsLF6xgHoIWarj8tddaiwFrNzLbWJPudpXKYA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: '*'
+      vite: ^3.0.0
       vue: ^3.0.0
     dependencies:
       '@babel/core': 7.20.5
@@ -1437,7 +1437,7 @@ packages:
     resolution: {integrity: sha512-E0tnaL4fr+qkdCNxJ+Xd0yM31UwMkQje76fsDVBBUCoGOUPexu2VDUYHL8P4CwV+zMvWw6nlRw19OnRKmYAJpw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
-      vite: '*'
+      vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
       vite: 3.2.5_73lfsi4xmmmu3zhcuv45qpgb6a
@@ -6872,13 +6872,34 @@ packages:
       - terser
     dev: true
 
+  /vite-node/0.26.0_73lfsi4xmmmu3zhcuv45qpgb6a:
+    resolution: {integrity: sha512-nLtHWCv6reONl1oFsKhQ/LT7n3UNLpvVARAJlmGrQV6qSElht/9AdN41Pa+WSkw2Winh682UzM0Yw0GNlfqejw==}
+    engines: {node: '>=v14.16.0'}
+    hasBin: true
+    dependencies:
+      debug: 4.3.4
+      mlly: 1.0.0
+      pathe: 0.2.0
+      source-map: 0.6.1
+      source-map-support: 0.5.21
+      vite: 3.2.5_73lfsi4xmmmu3zhcuv45qpgb6a
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+    dev: true
+
   /vite-plugin-checker/0.5.1_2diyh6cvkl6stcaq3dzcmc6p6a:
     resolution: {integrity: sha512-NFiO1PyK9yGuaeSnJ7Whw9fnxLc1AlELnZoyFURnauBYhbIkx9n+PmIXxSFUuC9iFyACtbJQUAEuQi6yHs2Adg==}
     engines: {node: '>=14.16'}
     peerDependencies:
       eslint: '>=7'
       typescript: '*'
-      vite: '*'
+      vite: ^2.0.0 || ^3.0.0-0
       vls: '*'
       vti: '*'
     peerDependenciesMeta:
@@ -6946,8 +6967,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.25.6_sass@1.56.2:
-    resolution: {integrity: sha512-jdPgmZ7BcDnm1+hmMPIl9BZjSy+b8Y8V0tQMsv7ECO90Qic7EZ5/+traILXLpsXgqK5KgVrUJmchevAUuKL/1w==}
+  /vitest/0.26.0_sass@1.56.2:
+    resolution: {integrity: sha512-5kUnms5WOa0qrDCJePEPB13v9mhr+ZT1Qy0qNg0eVj1X7/Fx4GY4L1e5s3OH+BQ/J7M5WtaKsUGv9l1pbC7v2Q==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
@@ -6982,6 +7003,7 @@ packages:
       tinypool: 0.3.0
       tinyspy: 1.0.2
       vite: 3.2.5_73lfsi4xmmmu3zhcuv45qpgb6a
+      vite-node: 0.26.0_73lfsi4xmmmu3zhcuv45qpgb6a
     transitivePeerDependencies:
       - less
       - sass
