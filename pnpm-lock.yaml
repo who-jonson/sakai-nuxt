@@ -18,7 +18,7 @@ specifiers:
   '@vueuse/nuxt': ^9.6.0
   '@whoj/eslint-config': ^1.0.2
   '@whoj/utils': ^1.2.1
-  chart.js: 3.9.1
+  chart.js: 4.1.1
   core-js: ^3.26.1
   eslint: ^8.28.0
   nuxt: ^3.0.0
@@ -51,7 +51,7 @@ devDependencies:
   '@vueuse/nuxt': 9.6.0_nuxt@3.0.0+vue@3.2.45
   '@whoj/eslint-config': 1.0.2_ha6vam6werchizxrnqvarmz2zu
   '@whoj/utils': 1.2.1_vue@3.2.45
-  chart.js: 3.9.1
+  chart.js: 4.1.1
   core-js: 3.26.1
   eslint: 8.29.0
   nuxt: 3.0.0_dgknlxxo2uxpo73krz6ht5ofxq
@@ -655,6 +655,10 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@kurkle/color/0.3.1:
+    resolution: {integrity: sha512-hW0GwZj06z/ZFUW2Espl7toVDjghJN+EKqyXzPSV8NV89d5BYp5rRMBJoc+aUN0x5OXDMeRQHazejr2Xmqj2tw==}
     dev: true
 
   /@mapbox/node-pre-gyp/1.0.10:
@@ -2286,8 +2290,11 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chart.js/3.9.1:
-    resolution: {integrity: sha512-Ro2JbLmvg83gXF5F4sniaQ+lTbSv18E+TIf2cOeiH1Iqd2PGFOtem+DUufMZsCJwFE7ywPOpfXFBwRTGq7dh6w==}
+  /chart.js/4.1.1:
+    resolution: {integrity: sha512-P0pCosNXp+LR8zO/QTkZKT6Hb7p0DPFtypEeVOf+6x06hX13NIb75R0DXUA4Ksx/+48chDQKtCCmRCviQRTqsA==}
+    engines: {pnpm: ^7.0.0}
+    dependencies:
+      '@kurkle/color': 0.3.1
     dev: true
 
   /check-error/1.0.2:
