@@ -2,7 +2,7 @@
   "name": "sakai-nuxt",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
+    "dev": "nuxi dev --host=uikit.apple.com -o",
     "build": "nuxi build",
     "generate": "nuxi generate",
     "prepare": "nuxi cleanup && nuxi prepare",
@@ -12,36 +12,34 @@
     "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
-    "pinia": "^2.0.26"
+    "pinia": "^2.0.30"
   },
   "devDependencies": {
-    "@nuxt/test-utils": "^3.0.0",
+    "@nuxt/test-utils": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@pinia/nuxt": "^0.4.5",
     "@pinia/testing": "^0.0.14",
     "@testing-library/vue": "latest",
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.11.18",
     "@types/serialize-javascript": "^5.0.2",
-    "@vue/compiler-sfc": "^3.2.45",
-    "@vueuse/components": "^9.6.0",
-    "@vueuse/core": "^9.6.0",
-    "@vueuse/nuxt": "^9.6.0",
-    "@whoj/eslint-config": "^1.0.2",
-    "@whoj/utils": "^1.2.1",
+    "@vue/compiler-sfc": "^3.2.47",
+    "@vueuse/components": "^9.12.0",
+    "@vueuse/core": "^9.12.0",
+    "@vueuse/nuxt": "^9.12.0",
+    "@whoj/eslint-config": "^1.2.0",
+    "@whoj/utils": "^1.5.0",
     "chart.js": "4.2.0",
-    "core-js": "^3.26.1",
-    "eslint": "^8.28.0",
-    "nuxt": "^3.0.0",
-    "primeflex": "^3.3.0",
-    "primeicons": "6.0.1",
-    "primevue": "^3.20.0",
+    "core-js": "^3.27.2",
+    "eslint": "^8.33.0",
+    "nuxt": "^3.1.0",
+    "primeflex": "^3.2.1",
+    "primeicons": "^6.0.1",
+    "primevue": "^3.22.1",
     "prismjs": "1.29.0",
-    "sass": "^1.56.1",
-    "sass-loader": "^13.2.0",
-    "typescript": "^4.9.3",
-    "vitest": "^0.28.0",
-    "vue": "^3.2.45",
-    "webpack": "^5.75.0"
+    "sass": "^1.58.0",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.4",
+    "vue": "^3.2.47"
   },
   "pnpm": {
     "allowedDeprecatedVersions": {
@@ -60,7 +58,7 @@
   },
   "packageManager": "pnpm@7.26.3",
   "engines": {
-    "node": ">=16.18"
+    "node": ">=16.18 || ^18.14"
   },
   "homepage": "https://github.com/who-jonson/sakai-nuxt#readme",
   "repository": {
