@@ -1,10 +1,11 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
 import AppTopBar from '~/components/layouts/default/AppTopbar.vue';
 import AppMenu from '~/components/layouts/default/AppMenu.vue';
 import AppConfig from '~/components/layouts/default/AppConfig.vue';
 import AppFooter from '~/components/layouts/default/AppFooter.vue';
 
-export default {
+export default defineComponent({
   components: {
     AppTopBar,
     AppMenu,
@@ -14,6 +15,8 @@ export default {
   data() {
     return {
       layoutMode: 'static',
+      menuActive: false,
+      menuClick: false,
       staticMenuInactive: false,
       overlayMenuActive: false,
       mobileMenuActive: false,
@@ -142,7 +145,7 @@ export default {
         'layout-mobile-sidebar-active': this.mobileMenuActive,
         'p-input-filled': this.$primevue.config.inputStyle === 'filled',
         'p-ripple-disabled': this.$primevue.config.ripple === false,
-        'layout-theme-light': this.$appState.theme.startsWith('saga')
+        'layout-theme-light': this.$appState.theme?.startsWith('saga')
       }];
     },
     logo() {
@@ -171,12 +174,12 @@ export default {
 
       this.menuClick = false;
     },
-    onMenuToggle() {
+    onMenuToggle(event: Event) {
       this.menuClick = true;
 
       if (this.isDesktop()) {
         if (this.layoutMode === 'overlay') {
-          if (this.mobileMenuActive === true) {
+          if (this.mobileMenuActive) {
             this.overlayMenuActive = true;
           }
 
@@ -194,23 +197,23 @@ export default {
     onSidebarClick() {
       this.menuClick = true;
     },
-    onMenuItemClick(event) {
+    onMenuItemClick(event: any) {
       if (event.item && !event.item.items) {
         this.overlayMenuActive = false;
         this.mobileMenuActive = false;
       }
     },
-    onLayoutChange(layoutMode) {
+    onLayoutChange(layoutMode: string) {
       this.layoutMode = layoutMode;
     },
-    addClass(element, className) {
+    addClass(element: Element, className: string) {
       if (element.classList) {
         element.classList.add(className);
       } else {
         element.className += ` ${className}`;
       }
     },
-    removeClass(element, className) {
+    removeClass(element: Element, className: string) {
       if (element.classList) {
         element.classList.remove(className);
       } else {
@@ -232,7 +235,7 @@ export default {
       return true;
     }
   }
-};
+});
 </script>
 
 <template>

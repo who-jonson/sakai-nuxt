@@ -42,7 +42,7 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
   };
 });
 
-declare module '#app' {
+declare module '@nuxt/schema' {
   interface NuxtApp {
     $appState: AppState;
   }

@@ -1,8 +1,4 @@
-import { fileURLToPath } from 'url';
-import { resolve } from 'pathe';
 import { defineNuxtConfig } from 'nuxt/config';
-
-const resolvePath = (...paths: string[]) => resolve(fileURLToPath(new URL('./', import.meta.url)), ...paths);
 
 export default defineNuxtConfig({
 
@@ -74,9 +70,6 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   vite: {
-    build: {
-      sourcemap: process.env.NODE_ENV !== 'production'
-    },
     clearScreen: true,
     logLevel: 'info'
   }
