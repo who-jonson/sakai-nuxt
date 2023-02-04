@@ -58,7 +58,7 @@
   },
   "packageManager": "pnpm@7.26.3",
   "engines": {
-    "node": ">=18.14"
+    "node": "^18.12"
   },
   "homepage": "https://github.com/who-jonson/sakai-nuxt#readme",
   "repository": {

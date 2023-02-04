@@ -70,6 +70,9 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   vite: {
+    build: {
+      sourcemap: false
+    },
     clearScreen: true,
     logLevel: 'info'
   }
