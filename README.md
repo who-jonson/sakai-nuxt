@@ -1,4 +1,6 @@
 #  Sakai Admin Template for Nuxt 3  
+
+> #### You should consider using [Sakai Nuxt Theme](https://github.com/who-jonson/sakai-nuxt-theme). 
  
 ### Live Preview
  
