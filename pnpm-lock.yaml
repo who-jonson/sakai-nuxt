@@ -18,7 +18,7 @@ specifiers:
   '@vueuse/nuxt': ^9.12.0
   '@whoj/eslint-config': ^1.2.0
   '@whoj/utils': ^1.5.0
-  chart.js: 4.2.0
+  chart.js: 4.2.1
   core-js: ^3.27.2
   eslint: ^8.33.0
   nuxt: ^3.1.0
@@ -49,7 +49,7 @@ devDependencies:
   '@vueuse/nuxt': 9.12.0_nuxt@3.1.2+vue@3.2.47
   '@whoj/eslint-config': 1.2.0_4vsywjlpuriuw3tl5oq6zy5a64
   '@whoj/utils': 1.5.0_vue@3.2.47
-  chart.js: 4.2.0
+  chart.js: 4.2.1
   core-js: 3.27.2
   eslint: 8.33.0
   nuxt: 3.1.2_nteoxhjinfjnzzvfyltwl4e3pe
@@ -2224,8 +2224,8 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chart.js/4.2.0:
-    resolution: {integrity: sha512-wbtcV+QKeH0F7gQZaCJEIpsNriFheacouJQTVIjITi3eQA8bTlIBoknz0+dgV79aeKLNMAX+nDslIVE/nJ3rzA==}
+  /chart.js/4.2.1:
+    resolution: {integrity: sha512-6YbpQ0nt3NovAgOzbkSSeeAQu/3za1319dPUQTXn9WcOpywM8rGKxJHrhS8V8xEkAlk8YhEfjbuAPfUyp6jIsw==}
     engines: {pnpm: ^7.0.0}
     dependencies:
       '@kurkle/color': 0.3.2
