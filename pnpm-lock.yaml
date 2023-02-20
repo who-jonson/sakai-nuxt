@@ -8,7 +8,7 @@ specifiers:
   '@nuxt/test-utils': ^3.1.0
   '@nuxtjs/eslint-config-typescript': ^12.0.0
   '@pinia/nuxt': ^0.4.5
-  '@pinia/testing': ^0.0.14
+  '@pinia/testing': ^0.0.15
   '@testing-library/vue': latest
   '@types/node': ^18.11.18
   '@types/serialize-javascript': ^5.0.2
@@ -39,7 +39,7 @@ devDependencies:
   '@nuxt/test-utils': 3.1.2_vue@3.2.47
   '@nuxtjs/eslint-config-typescript': 12.0.0_4vsywjlpuriuw3tl5oq6zy5a64
   '@pinia/nuxt': 0.4.6_hmuptsblhheur2tugfgucj7gc4
-  '@pinia/testing': 0.0.14_pinia@2.0.30+vue@3.2.47
+  '@pinia/testing': 0.0.15_pinia@2.0.30+vue@3.2.47
   '@testing-library/vue': 6.6.1_a2ihsjreowava2sm4iorpgwkom
   '@types/node': 18.11.18
   '@types/serialize-javascript': 5.0.2
@@ -989,10 +989,10 @@ packages:
       - vue
     dev: true
 
-  /@pinia/testing/0.0.14_pinia@2.0.30+vue@3.2.47:
-    resolution: {integrity: sha512-ZmZwVNd/NnKYLIfjfuKl0zlJ3UdiXFpsHzSlL6wCeezSlyrqGMxsIQKv0J6fleu38gyCNTPBEipfxrt8V4+VIg==}
+  /@pinia/testing/0.0.15_pinia@2.0.30+vue@3.2.47:
+    resolution: {integrity: sha512-Ykz5sPUVDphDMssA27+ExPSzxqfn7Y3jax77KA0AChDB6ODu31CnXIwoiUG+U5WA6ey7gzHkZh8wlnAtzVnB8g==}
     peerDependencies:
-      pinia: '>=2.0.19'
+      pinia: '>=2.0.31'
     dependencies:
       pinia: 2.0.30_hmuptsblhheur2tugfgucj7gc4
       vue-demi: 0.13.11_vue@3.2.47
