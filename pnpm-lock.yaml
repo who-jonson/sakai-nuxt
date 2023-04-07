@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^0.4.5
     version: 0.4.6(typescript@5.0.2)(vue@3.2.47)
   '@pinia/testing':
-    specifier: ^0.0.15
-    version: 0.0.15(pinia@2.0.30)(vue@3.2.47)
+    specifier: ^0.0.16
+    version: 0.0.16(pinia@2.0.30)(vue@3.2.47)
   '@testing-library/vue':
     specifier: latest
     version: 7.0.0(@vue/compiler-sfc@3.2.47)(vue@3.2.47)
@@ -689,6 +689,10 @@ packages:
 
   /@jridgewell/sourcemap-codec@1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}
+    dev: true
+
+  /@jridgewell/sourcemap-codec@1.4.15:
+    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
 
   /@jridgewell/trace-mapping@0.3.17:
     resolution: {integrity: sha512-MCNzAp77qzKca9+W/+I0+sEpaUnZoeasnghNeVc41VZCEKaCH73Vq3BZZ/SzWIgrqE4H4ceI+p+b6C0mHf9T4g==}
@@ -964,10 +968,10 @@ packages:
       - vue
     dev: true
 
-  /@pinia/testing@0.0.15(pinia@2.0.30)(vue@3.2.47):
-    resolution: {integrity: sha512-Ykz5sPUVDphDMssA27+ExPSzxqfn7Y3jax77KA0AChDB6ODu31CnXIwoiUG+U5WA6ey7gzHkZh8wlnAtzVnB8g==}
+  /@pinia/testing@0.0.16(pinia@2.0.30)(vue@3.2.47):
+    resolution: {integrity: sha512-oa5kO82hzWekqMq1HTnS/b+ZM+ZKEcEApuuCTelvKK79jTxg7P026Qw8/2RbVn5eUGAvRWQu4ubObrshVqCRjQ==}
     peerDependencies:
-      pinia: '>=2.0.31'
+      pinia: '>=2.0.34'
     dependencies:
       pinia: 2.0.30(typescript@5.0.2)(vue@3.2.47)
       vue-demi: 0.13.11(vue@3.2.47)
@@ -4616,13 +4620,13 @@ packages:
   /magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
-      sourcemap-codec: /@jridgewell/sourcemap-codec@1.4.14
+      sourcemap-codec: /@jridgewell/sourcemap-codec@1.4.15
 
   /magic-string@0.26.7:
     resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
     engines: {node: '>=12'}
     dependencies:
-      sourcemap-codec: /@jridgewell/sourcemap-codec@1.4.14
+      sourcemap-codec: /@jridgewell/sourcemap-codec@1.4.15
     dev: true
 
   /magic-string@0.27.0:
