@@ -49,6 +49,12 @@ export default defineNuxtConfig({
     reactivityTransform: true
   },
 
+  googleFonts: {
+    families: {
+      Inter: true
+    }
+  },
+
   imports: {
     autoImport: true,
     addons: {
@@ -56,9 +62,18 @@ export default defineNuxtConfig({
     }
   },
 
+  macros: {
+    reactivityTransform: true
+  },
+
   modules: [
+    'nuxt-icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
+    '@vite-pwa/nuxt',
+    '@vue-macros/nuxt',
+    'nuxt-typed-router',
+    '@nuxtjs/google-fonts',
     '~/modules/primevue'
   ],
 
@@ -74,5 +89,40 @@ export default defineNuxtConfig({
     },
     clearScreen: true,
     logLevel: 'info'
+  },
+
+  pwa: {
+    workbox: {
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'google-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'gstatic-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200]
+            }
+          }
+        }
+      ]
+    }
   }
 });
