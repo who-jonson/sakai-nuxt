@@ -1,7 +1,8 @@
 import defu from 'defu';
+import type { PathLike } from 'fs';
 import serialize from 'serialize-javascript';
-import { addTemplate, defineNuxtModule, importModule, resolvePath, useLogger } from '@nuxt/kit';
 import type { RouteRecordRaw } from 'vue-router';
+import { addTemplate, defineNuxtModule, resolvePath, useLogger, useNuxt } from '@nuxt/kit';
 
 export interface ModuleOptions {
   path?: string;
@@ -10,7 +11,7 @@ export interface ModuleOptions {
 }
 
 export type RouteRaw = RouteRecordRaw & {
-  file
+  file: string | PathLike
 };
 
 const logger = useLogger('nuxt:router');
@@ -19,11 +20,11 @@ const DEFAULTS = {
   parsePages: false
 };
 
-export function addComponentToRoutes(routes: RouteRaw[]) {
+export function addComponentToRoutes(routes: RouteRaw[]): RouteRecordRaw[] {
   return routes.map(route => ({
     ...route,
     children: route.children ? addComponentToRoutes(route.children as RouteRaw[]) : [],
-    component: `{() => import('${route.file}')}`
+    component: (() => import(`${route.file}`)) as any
   }));
 }
 
@@ -34,8 +35,9 @@ export default defineNuxtModule<ModuleOptions>({
   },
   defaults: DEFAULTS,
   hooks: {
-    'build:before': function ({ nuxt }) {
+    'build:before': function () {
       logger.info('Building routes!');
+      const nuxt = useNuxt();
       const options = defu(
         (nuxt.options.routerModule || {}),
         {
@@ -47,14 +49,12 @@ export default defineNuxtModule<ModuleOptions>({
       addTemplate({
         filename: 'routes.mjs',
         getContents: async () => {
-          const { createRoutes } = await importModule(options.fileName, {
-            paths: options.path
-          });
-          const pages = createRoutes().map((route) => {
+          const { createRoutes } = await import(options.fileName /** vite-ignore */);
+          const pages = createRoutes().map((route: RouteRaw) => {
             return { ...route, file: route.component };
           });
           await nuxt.callHook('pages:extend', pages);
-          const serializedRoutes: Partial<RouteRecordRaw> = addComponentToRoutes(pages);
+          const serializedRoutes: Partial<RouteRecordRaw>[] = addComponentToRoutes(pages);
 
           return `export default ${serialize(serializedRoutes)}`;
         }

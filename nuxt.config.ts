@@ -46,8 +46,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    reactivityTransform: true,
-    treeshakeClientOnly: true
+    reactivityTransform: true
   },
 
   imports: {
