@@ -25,7 +25,7 @@
     "@types/serialize-javascript": "^5.0.2",
     "@vite-pwa/nuxt": "^0.0.7",
     "@vue-macros/nuxt": "^1.2.8",
-    "@vue/compiler-sfc": "^3.2.47",
+    "@vue/compiler-sfc": "^3.3.0-beta",
     "@vueuse/components": "^10.0.0",
     "@vueuse/core": "^10.0.0",
     "@vueuse/nuxt": "^10.0.0",
