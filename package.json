@@ -35,7 +35,7 @@
     "core-js": "^3.30.1",
     "eslint": "^8.38.0",
     "nuxt": "^3.4.1",
-    "nuxt-icon": "^0.3.3",
+    "nuxt-icon": "^0.5.0",
     "nuxt-typed-router": "^3.1.4",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",
