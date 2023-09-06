@@ -64,8 +64,8 @@ devDependencies:
     specifier: ^1.7.3
     version: 1.7.3(vue@3.2.47)
   chart.js:
-    specifier: 4.2.1
-    version: 4.2.1
+    specifier: 4.4.0
+    version: 4.4.0
   core-js:
     specifier: ^3.30.1
     version: 3.30.1
@@ -4001,9 +4001,9 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /chart.js@4.2.1:
-    resolution: {integrity: sha512-6YbpQ0nt3NovAgOzbkSSeeAQu/3za1319dPUQTXn9WcOpywM8rGKxJHrhS8V8xEkAlk8YhEfjbuAPfUyp6jIsw==}
-    engines: {pnpm: ^7.0.0}
+  /chart.js@4.4.0:
+    resolution: {integrity: sha512-vQEj6d+z0dcsKLlQvbKIMYFHd3t8W/7L2vfJIbYcfyPcRx92CsHqECpueN8qVGNlKyDcr5wBrYAYKnfu/9Q1hQ==}
+    engines: {pnpm: '>=7'}
     dependencies:
       '@kurkle/color': 0.3.2
     dev: true
