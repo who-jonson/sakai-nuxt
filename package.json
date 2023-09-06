@@ -21,7 +21,7 @@
     "@pinia/nuxt": "^0.4.8",
     "@pinia/testing": "^0.0.16",
     "@testing-library/vue": "latest",
-    "@types/node": "^18.15.11",
+    "@types/node": "^20.0.0",
     "@types/serialize-javascript": "^5.0.2",
     "@vite-pwa/nuxt": "^0.0.7",
     "@vue-macros/nuxt": "^1.2.8",
