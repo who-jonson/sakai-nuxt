@@ -21,7 +21,7 @@
     "@pinia/nuxt": "^0.4.8",
     "@pinia/testing": "^0.1.0",
     "@testing-library/vue": "latest",
-    "@types/node": "^18.15.11",
+    "@types/node": "^20.0.0",
     "@types/serialize-javascript": "^5.0.2",
     "@vite-pwa/nuxt": "^0.1.0",
     "@vue-macros/nuxt": "^1.2.8",
@@ -64,7 +64,7 @@
   },
   "packageManager": "pnpm@8.8.0",
   "engines": {
-    "node": "^18.12"
+    "node": "^20.0.0"
   },
   "homepage": "https://github.com/who-jonson/sakai-nuxt#readme",
   "repository": {
