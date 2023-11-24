@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  emits: ['topbar-menu-toggle', 'menu-toggle'],
+  emits: ['topbarMenuToggle', 'menuToggle'],
   computed: {
     darkTheme() {
       return this.$appState.darkTheme;
@@ -8,10 +8,10 @@ export default {
   },
   methods: {
     onMenuToggle(event) {
-      this.$emit('menu-toggle', event);
+      this.$emit('menuToggle', event);
     },
     onTopbarMenuToggle(event) {
-      this.$emit('topbar-menu-toggle', event);
+      this.$emit('topbarMenuToggle', event);
     },
     topbarImage() {
       return this.$appState.darkTheme ? '/images/logo-white.svg' : '/images/logo-dark.svg';

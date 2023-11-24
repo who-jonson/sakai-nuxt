@@ -1,6 +1,9 @@
 import {
   addComponent,
+  addImports,
+  addPlugin,
   addPluginTemplate,
+  createResolver,
   defineNuxtModule,
   normalizeTemplate
 } from '@nuxt/kit';
@@ -134,6 +137,16 @@ export default defineNuxtModule<PrimeVueOptions>({
     inputStyle: 'outlined'
   },
   async setup(options, nuxt) {
+    const { resolve } = createResolver(import.meta.url);
+
+    nuxt.options.build.transpile.push(
+      resolve('./runtime/plugin')
+    );
+
+    addImports(
+      { from: 'primevue/config', name: 'usePrimeVue' }
+    );
+
     addPluginTemplate(normalizeTemplate({
       filename: 'primevue.config.mjs',
       getContents() {
@@ -148,7 +161,9 @@ export default defineNuxtModule<PrimeVueOptions>({
       }
     }));
 
-    if (options.components.include) {
+    addPlugin(resolve('./runtime/plugin'));
+
+    if (options.components?.include) {
       for (const component of options.components.include) {
         if (isObject(component)) {
           await registerComponent(component.name, (component.global || options.components.global));
@@ -158,10 +173,16 @@ export default defineNuxtModule<PrimeVueOptions>({
       }
     } else {
       for (const component of primevueComponents) {
-        if (!isArray(options.components.exclude) || !options.components.exclude.includes(component)) {
-          await registerComponent(component, options.components.global);
+        if (!isArray(options.components?.exclude) || !options.components.exclude.includes(component)) {
+          await registerComponent(component, options.components?.global);
         }
       }
     }
+
+    nuxt.hook('prepare:types', ({ references }) => {
+      references.push(
+        { types: 'primevue/config' }
+      );
+    });
   }
 });

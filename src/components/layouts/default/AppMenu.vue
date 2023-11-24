@@ -11,16 +11,13 @@ export default {
       default: () => ([])
     }
   },
-  emits: ['menuitem-click'],
+  emits: ['menuitemClick'],
   computed: {
     darkTheme() {
       return this.$appState.darkTheme;
     }
   },
   methods: {
-    onMenuItemClick(event) {
-      this.$emit('menuitem-click', event);
-    },
     bannerImage() {
       return this.$appState.darkTheme ? '/images/banner-primeblocks-dark.png' : '/images/banner-primeblocks.png';
     }
@@ -30,7 +27,7 @@ export default {
 
 <template>
   <div class="layout-menu-container">
-    <AppSubmenu :items="model" class="layout-menu" :root="true" @menuitem-click="onMenuItemClick" />
+    <AppSubmenu :items="model" class="layout-menu" :root="true" @menuitem-click="$emit('menuitemClick', $event)" />
   </div>
 </template>
 

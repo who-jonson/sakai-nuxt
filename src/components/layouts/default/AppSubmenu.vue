@@ -11,7 +11,7 @@ export default {
       default: false
     }
   },
-  emits: ['menuitem-click'],
+  emits: ['menuitemClick'],
   data() {
     return {
       activeIndex: null
@@ -35,7 +35,7 @@ export default {
 
       this.activeIndex = index === this.activeIndex ? null : index;
 
-      this.$emit('menuitem-click', {
+      this.$emit('menuitemClick', {
         originalEvent: event,
         item
       });
@@ -55,7 +55,7 @@ export default {
           <div class="layout-menuitem-root-text">
             {{ item.label }}
           </div>
-          <AppSubmenu :items="visible(item) && item.items" @menuitem-click="$emit('menuitem-click', $event)" />
+          <AppSubmenu :items="visible(item) && item.items" @menuitem-click="$emit('menuitemClick', $event)" />
         </template>
         <template v-else>
           <NuxtLink
@@ -90,7 +90,7 @@ export default {
             <Badge v-if="item.badge" :value="item.badge" />
           </a>
           <transition name="layout-submenu-wrapper">
-            <AppSubmenu v-show="activeIndex === i" :items="visible(item) && item.items" @menuitem-click="$emit('menuitem-click', $event)" />
+            <AppSubmenu v-show="activeIndex === i" :items="visible(item) && item.items" @menuitem-click="$emit('menuitemClick', $event)" />
           </transition>
         </template>
       </li>

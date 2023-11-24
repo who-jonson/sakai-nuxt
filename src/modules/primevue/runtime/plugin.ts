@@ -5,7 +5,6 @@ import ToastService from 'primevue/toastservice';
 import BadgeDirective from 'primevue/badgedirective';
 import ConfirmationService from 'primevue/confirmationservice';
 import { createGlobalState, reactiveComputed, useLocalStorage } from '@vueuse/core';
-import { defineNuxtPlugin, watch } from '#imports';
 
 import CodeHighlight from '~/directives/code';
 
@@ -42,13 +41,13 @@ export default defineNuxtPlugin(({ vueApp: app }) => {
   };
 });
 
-declare module '@nuxt/schema' {
+declare module '#app' {
   interface NuxtApp {
     $appState: AppState;
   }
 }
 
-declare module '@vue/runtime-core' {
+declare module 'vue' {
   interface ComponentCustomProperties {
     $appState: AppState;
     outsideClickListener?: ((event: Event) => void) | null;

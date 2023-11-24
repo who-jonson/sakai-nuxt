@@ -488,9 +488,7 @@ export default {
         <p>Steps and TabMenu are integrated with the same child routes.</p>
         <Steps :model="nestedRouteItems" :readonly="false" />
 
-        <Suspense>
-          <NuxtChild />
-        </Suspense>
+        <NuxtPage />
       </div>
     </div>
 
@@ -500,9 +498,7 @@ export default {
         <p>Steps and TabMenu are integrated with the same child routes.</p>
         <TabMenu :model="nestedRouteItems" />
 
-        <Suspense>
-          <NuxtChild />
-        </Suspense>
+        <NuxtPage />
       </div>
     </div>
 

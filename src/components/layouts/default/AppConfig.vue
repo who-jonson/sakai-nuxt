@@ -8,7 +8,23 @@ export default defineComponent({
       default: 'static'
     }
   },
-  emits: ['layout-change'],
+  emits: ['layoutChange'],
+  setup() {
+    const primevue = usePrimeVue();
+
+    const rippleActive = computed({
+      get() {
+        return primevue.config.ripple;
+      },
+      set(value) {
+        primevue.config.ripple = value;
+      }
+    });
+
+    return {
+      rippleActive
+    };
+  },
   data() {
     return {
       active: false,
@@ -20,9 +36,6 @@ export default defineComponent({
   computed: {
     containerClass() {
       return ['layout-config', { 'layout-config-active': this.active }];
-    },
-    rippleActive() {
-      return this.$primevue.config.ripple;
     },
     inputStyle() {
       return this.$primevue.config.inputStyle;
@@ -59,11 +72,8 @@ export default defineComponent({
     changeInputStyle(value: string) {
       this.$primevue.config.inputStyle = value;
     },
-    changeRipple(value: boolean) {
-      this.$primevue.config.ripple = value;
-    },
     changeLayout(event: Event, layoutMode: string) {
-      this.$emit('layout-change', layoutMode);
+      this.$emit('layoutChange', layoutMode);
       event.preventDefault();
     },
     bindOutsideClickListener() {
@@ -146,7 +156,7 @@ export default defineComponent({
       </div>
 
       <h5>Ripple Effect</h5>
-      <InputSwitch :model-value="rippleActive" @update:modelValue="changeRipple" />
+      <InputSwitch v-model="rippleActive" />
 
       <h5>Menu Type</h5>
       <div class="p-formgroup-inline">

@@ -46,9 +46,13 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    reactivityTransform: true
+    asyncContext: true,
+    headNext: true,
+    typedPages: true,
+    typescriptBundlerResolution: true
   },
 
+  // @ts-ignore
   googleFonts: {
     families: {
       Inter: true
@@ -62,26 +66,36 @@ export default defineNuxtConfig({
     }
   },
 
-  macros: {
-    reactivityTransform: true
-  },
-
   modules: [
     'nuxt-icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
-    '@vue-macros/nuxt',
-    'nuxt-typed-router',
     '@nuxtjs/google-fonts',
     '~/modules/primevue'
   ],
 
   nitro: {
-    preset: 'vercel'
+    experimental: {
+      asyncContext: true
+    },
+
+    future: {
+      nativeSWR: true
+    }
+  },
+
+  postcss: {
+    plugins: {
+      autoprefixer: {}
+    }
   },
 
   srcDir: 'src/',
+
+  typescript: {
+    shim: false
+  },
 
   vite: {
     build: {
