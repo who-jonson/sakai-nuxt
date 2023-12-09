@@ -1,9 +1,5 @@
 #  Sakai Admin Template for Nuxt 3  
 
-> #### You should consider using [Sakai Nuxt Theme](https://github.com/who-jonson/sakai-nuxt-theme). 
- 
-### Live Preview
- 
 Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
  
 ### Getting Started
