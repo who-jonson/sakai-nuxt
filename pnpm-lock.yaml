@@ -43,7 +43,7 @@ devDependencies:
     version: 10.6.1(vue@3.4.38)
   '@vueuse/core':
     specifier: ^10.6.1
-    version: 10.6.1(vue@3.4.38)
+    version: 10.11.1(vue@3.4.38)
   '@vueuse/nuxt':
     specifier: ^10.6.1
     version: 10.6.1(nuxt@3.8.2)(rollup@2.79.1)(vue@3.4.38)
@@ -3934,6 +3934,18 @@ packages:
       - vue
     dev: true
 
+  /@vueuse/core@10.11.1(vue@3.4.38):
+    resolution: {integrity: sha512-guoy26JQktXPcz+0n3GukWIy/JDNKti9v6VEMu6kV2sYBsWuGiTU8OWdg+ADfUbHg3/3DlqySDe7JmdHrktiww==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.20
+      '@vueuse/metadata': 10.11.1
+      '@vueuse/shared': 10.11.1(vue@3.4.38)
+      vue-demi: 0.14.10(vue@3.4.38)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
   /@vueuse/core@10.6.1(vue@3.4.38):
     resolution: {integrity: sha512-Pc26IJbqgC9VG1u6VY/xrXXfxD33hnvxBnKrLlA2LJlyHII+BSrRoTPJgGYq7qZOu61itITFUnm6QbacwZ4H8Q==}
     dependencies:
@@ -3944,6 +3956,10 @@ packages:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+    dev: true
+
+  /@vueuse/metadata@10.11.1:
+    resolution: {integrity: sha512-IGa5FXd003Ug1qAZmyE8wF3sJ81xGLSqTqtQ6jaVfkeZ4i5kS2mwQF61yhVqojRnenVew5PldLyRgvdl4YYuSw==}
     dev: true
 
   /@vueuse/metadata@10.6.1:
@@ -3965,6 +3981,15 @@ packages:
       - '@vue/composition-api'
       - rollup
       - supports-color
+      - vue
+    dev: true
+
+  /@vueuse/shared@10.11.1(vue@3.4.38):
+    resolution: {integrity: sha512-LHpC8711VFZlDaYUXEBbFBCQ7GS3dVU9mjOhhMhXP6txTV4EhYQg/KGnQuvt/sPAtoUKq7VVUnL6mVtFoL42sA==}
+    dependencies:
+      vue-demi: 0.14.10(vue@3.4.38)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
       - vue
     dev: true
 
