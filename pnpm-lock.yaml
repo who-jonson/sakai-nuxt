@@ -19,7 +19,7 @@ devDependencies:
     version: 3.8.1(rollup@2.79.1)(vitest@0.34.6)(vue@3.4.38)
   '@nuxtjs/google-fonts':
     specifier: ^3.0.1
-    version: 3.1.0(rollup@2.79.1)
+    version: 3.2.0(rollup@2.79.1)
   '@pinia/nuxt':
     specifier: ^0.5.1
     version: 0.5.3(rollup@2.79.1)(typescript@5.5.4)(vue@3.4.38)
@@ -2609,13 +2609,14 @@ packages:
       - vue-tsc
     dev: true
 
-  /@nuxtjs/google-fonts@3.1.0(rollup@2.79.1):
-    resolution: {integrity: sha512-4e6FacoTXefYNUzQkRqUBlB/uH/JTLYX2vDoOB6saUS4I81k2DNn8qQfUgiv5xc9nZyTOjYGqOHBJm8U4Ec4pQ==}
+  /@nuxtjs/google-fonts@3.2.0(rollup@2.79.1):
+    resolution: {integrity: sha512-cGAjDJoeQ2jm6VJCo4AtSmKO6KjsbO9RSLj8q261fD0lMVNMZCxkCxBkg8L0/2Vfgp+5QBHWVXL71p1tiybJFw==}
     dependencies:
-      '@nuxt/kit': 3.8.2(rollup@2.79.1)
-      google-fonts-helper: 3.4.0
-      pathe: 1.1.1
+      '@nuxt/kit': 3.12.4(rollup@2.79.1)
+      google-fonts-helper: 3.6.0
+      pathe: 1.1.2
     transitivePeerDependencies:
+      - magicast
       - rollup
       - supports-color
     dev: true
@@ -6576,13 +6577,13 @@ packages:
       unicorn-magic: 0.1.0
     dev: true
 
-  /google-fonts-helper@3.4.0:
-    resolution: {integrity: sha512-WlSzFb7AnsTo1dSUL/A070fiQFbr89bw82u4FOyuQeigyfBaPLP4KP8qGfOMRWcb+IRowQtEwIwS4sEA2BzGFw==}
+  /google-fonts-helper@3.6.0:
+    resolution: {integrity: sha512-ReantWd/l8dedKqTYjvqaQ55rAl/rbRqWL5VXHNXtGwIhMX4N8VNA7V19drr7xiv5G3pzlYID0K4FauvGqnWEg==}
     dependencies:
       deepmerge: 4.3.1
       hookable: 5.5.3
-      ofetch: 1.3.3
-      ufo: 1.3.2
+      ofetch: 1.3.4
+      ufo: 1.5.4
     dev: true
 
   /gopd@1.0.1:
@@ -8399,6 +8400,14 @@ packages:
       destr: 2.0.2
       node-fetch-native: 1.4.1
       ufo: 1.3.2
+    dev: true
+
+  /ofetch@1.3.4:
+    resolution: {integrity: sha512-KLIET85ik3vhEfS+3fDlc/BAZiAp+43QEC/yCo5zkNoY2YaKvNkOaFr/6wCFgFH1kuYQM5pMNi0Tg8koiIemtw==}
+    dependencies:
+      destr: 2.0.3
+      node-fetch-native: 1.6.4
+      ufo: 1.5.4
     dev: true
 
   /ohash@1.1.3:
