@@ -43,7 +43,7 @@ devDependencies:
     version: 10.6.1(vue@3.4.38)
   '@vueuse/core':
     specifier: ^10.6.1
-    version: 10.6.1(vue@3.4.38)
+    version: 10.11.1(vue@3.4.38)
   '@vueuse/nuxt':
     specifier: ^10.6.1
     version: 10.11.1(nuxt@3.8.2)(rollup@2.79.1)(vue@3.4.38)
