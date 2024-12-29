@@ -3,7 +3,7 @@
 Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
  
 > [!TIP]
-> See [the playground](https://stackblitz.com/~/github.com/who-jonson/sakai-nuxt?file=package.json) for a full working example
+> See [the playground](https://stackblitz.com/~/github.com/who-jonson/sakai-nuxt) for a full working example
  
 ### Getting Started
 To get started, clone this repository from GitHub and install the dependencies with pnpm or npm or yarn.
