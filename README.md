@@ -2,9 +2,11 @@
 
 Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
  
+> [!TIP]
+> See [the playground](https://stackblitz.com/~/github.com/who-jonson/sakai-nuxt?file=package.json) for a full working example
+ 
 ### Getting Started
-Sakai is an application template for Vue based on the [Vue CLI](https://cli.vuejs.org/) that provides out-of-the-box standard
-tooling for Vue projects. To get started, clone this repository from GitHub and install the dependencies with pnpm or npm or yarn.
+To get started, clone this repository from GitHub and install the dependencies with pnpm or npm or yarn.
                 
 ```bash
 pnpm install  # npm install
