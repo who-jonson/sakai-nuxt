@@ -69,7 +69,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@vite-pwa/nuxt',
+    // '@vite-pwa/nuxt', // Disabled for Nuxt 4 compatibility 
     '@nuxtjs/google-fonts',
     '@primevue/nuxt-module'
   ],

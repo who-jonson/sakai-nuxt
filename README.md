@@ -1,10 +1,13 @@
-#  Sakai Admin Template for Nuxt 3  
+#  Sakai Admin Template for Nuxt 4 
 
 Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
- 
+
 > [!TIP]
 > See [the playground](https://stackblitz.com/~/github.com/who-jonson/sakai-nuxt) for a full working example
- 
+
+> [!NOTE]
+> This template has been upgraded to **Nuxt 4** and **PrimeVue 4** with the official **@primevue/nuxt-module**
+
 ### Getting Started
 To get started, clone this repository from GitHub and install the dependencies with pnpm or npm or yarn.
                 
@@ -56,14 +59,18 @@ Dependencies of Sakai are listed below and needs to be added to package.json.
 
 ```json
 {
-    "primeflex": "3.2.1",
-    "primeicons": "6.0.1",
-    "primevue": "3.17.0"
+    "@primevue/nuxt-module": "^4.3.7",
+    "primeflex": "^4.0.0",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.3.7"
 }
 ```
 
-### PrimeVue Theme
-Sakai uses the free Saga, Arya and Vela themes which are distributed within PrimeVue, however it can be used with any PrimeVue theme as well such as material, tailwind and bootstrap as layout colors are derived from the theme used via CSS variables.
+### PrimeVue 4 Configuration
+This template uses the official **@primevue/nuxt-module** for PrimeVue 4 integration. The configuration automatically includes all PrimeVue components and uses the modern Lara theme with CSS variables for easy customization.
+
+### Theme Customization
+Sakai uses PrimeVue 4's new theming system with CSS variables. The default Lara theme is configured, but you can easily switch between different themes or customize colors through CSS variables.
 
 ### SASS Variables
 In case you'd like to customize the layout variables, open **_variables.scss** file under src/layout folder. The list is pretty short as majority of the variables are derived from the PrimeVue theme being used.
