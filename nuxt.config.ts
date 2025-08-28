@@ -16,8 +16,7 @@ export default defineNuxtConfig({
 
   build: {
     transpile: [
-      'chart.js',
-      'primevue'
+      'chart.js'
     ]
   },
 
@@ -33,7 +32,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    'primevue/resources/primevue.css',
     'primeflex/primeflex.css',
     'primeicons/primeicons.css',
     'prismjs/themes/prism-coy.css',
@@ -67,13 +65,33 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-icon',
+    '@nuxt/icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
     '@nuxtjs/google-fonts',
-    '~/modules/primevue'
+    '@primevue/nuxt-module'
   ],
+
+  primevue: {
+    components: {
+      include: '*'
+    },
+    directives: {
+      include: ['Ripple', 'Tooltip', 'StyleClass', 'Badge']
+    },
+    options: {
+      ripple: true,
+      inputVariant: 'outlined',
+      theme: {
+        preset: 'Lara',
+        options: {
+          prefix: 'p',
+          darkModeSelector: '.dark'
+        }
+      }
+    }
+  },
 
   nitro: {
     experimental: {
@@ -99,10 +117,14 @@ export default defineNuxtConfig({
 
   vite: {
     build: {
-      sourcemap: false
+      sourcemap: false,
+      rollupOptions: {
+        external: false
+      }
     },
     clearScreen: true,
-    logLevel: 'info'
+    logLevel: 'info',
+    assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.gif']
   },
 
   pwa: {
