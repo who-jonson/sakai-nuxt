@@ -40,14 +40,15 @@ export default defineNuxtConfig({
   ],
 
   dir: {
-    public: '../public/'
+    public: './public/'
   },
 
   experimental: {
     asyncContext: true,
     headNext: true,
     typedPages: true,
-    typescriptBundlerResolution: true
+    typescriptBundlerResolution: true,
+    watcher: 'chokidar'
   },
 
   // @ts-ignore
