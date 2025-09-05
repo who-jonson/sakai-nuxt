@@ -39,19 +39,12 @@ export default defineNuxtConfig({
     '~/assets/demo/flags/flags.css'
   ],
 
-  dir: {
-    public: './public/'
+
+
+  future: {
+    compatibilityVersion: 4
   },
 
-  experimental: {
-    asyncContext: true,
-    headNext: true,
-    typedPages: true,
-    typescriptBundlerResolution: true,
-    watcher: 'chokidar'
-  },
-
-  // @ts-ignore
   googleFonts: {
     families: {
       Inter: true
@@ -95,10 +88,6 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    experimental: {
-      asyncContext: true
-    },
-
     future: {
       nativeSWR: true
     }
@@ -113,7 +102,12 @@ export default defineNuxtConfig({
   srcDir: 'src/',
 
   typescript: {
-    shim: false
+    shim: false,
+    tsConfig: {
+      compilerOptions: {
+        moduleResolution: 'bundler'
+      }
+    }
   },
 
   vite: {
