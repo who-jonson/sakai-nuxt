@@ -12,7 +12,8 @@
     "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "ufo": "^1.6.1"
   },
   "devDependencies": {
     "@nuxt/icon": "^2.0.0",
@@ -44,6 +45,9 @@
     "typescript": "^5.3.2",
     "vitest": "^0.34.6"
   },
+  "overrides": {
+    "ufo": "^1.6.1"
+  },
   "pnpm": {
     "allowedDeprecatedVersions": {
       "stable": "*",
@@ -51,7 +55,8 @@
     },
     "overrides": {
       "core-js": "$core-js",
-      "sourcemap-codec": "npm:@jridgewell/sourcemap-codec@latest"
+      "sourcemap-codec": "npm:@jridgewell/sourcemap-codec@latest",
+      "ufo": "^1.6.1"
     },
     "peerDependencyRules": {
       "allowAny": [
