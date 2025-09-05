@@ -36,7 +36,7 @@
     "chart.js": "^4.4.0",
     "core-js": "^3.31.0",
     "eslint": "^8.54.0",
-    "nuxt": "^4.0.3",
+    "nuxt": "^4.1.0",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primevue": "^4.3.7",
