@@ -1,4 +1,4 @@
-#  Sakai Admin Template for Nuxt 4  
+# Sakai Admin Template for Nuxt 4
 
 Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
  
