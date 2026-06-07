@@ -1,4 +1,4 @@
-#  Sakai Admin Template for Nuxt 3  
+#  Sakai Admin Template for Nuxt 4  
 
 Visit [Sakai Nuxt](https://sakai-nuxt.vercel.app) website for a live preview. 
  
@@ -58,9 +58,18 @@ Dependencies of Sakai are listed below and needs to be added to package.json.
 {
     "primeflex": "3.2.1",
     "primeicons": "6.0.1",
-    "primevue": "3.17.0"
+    "primevue": "^4.5.5"
 }
 ```
+
+### Vercel deployment
+The project builds for Vercel using the existing build script:
+
+```bash
+pnpm build
+```
+
+No additional Vercel environment variables are required for the default setup.
 
 ### PrimeVue Theme
 Sakai uses the free Saga, Arya and Vela themes which are distributed within PrimeVue, however it can be used with any PrimeVue theme as well such as material, tailwind and bootstrap as layout colors are derived from the theme used via CSS variables.

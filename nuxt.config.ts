@@ -33,7 +33,6 @@ export default defineNuxtConfig({
   },
 
   css: [
-    'primevue/resources/primevue.css',
     'primeflex/primeflex.css',
     'primeicons/primeicons.css',
     'prismjs/themes/prism-coy.css',
@@ -47,9 +46,7 @@ export default defineNuxtConfig({
 
   experimental: {
     asyncContext: true,
-    headNext: true,
-    typedPages: true,
-    typescriptBundlerResolution: true
+    typedPages: true
   },
 
   // @ts-ignore
@@ -67,13 +64,21 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    'nuxt-icon',
+    '@nuxt/icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@vite-pwa/nuxt',
     '@nuxtjs/google-fonts',
-    '~/modules/primevue'
+    '@primevue/nuxt-module'
   ],
+
+  primevue: {
+    options: {
+      ripple: true,
+      inputVariant: 'outlined',
+      theme: 'none'
+    }
+  },
 
   nitro: {
     experimental: {
@@ -91,6 +96,8 @@ export default defineNuxtConfig({
     }
   },
 
+  plugins: ['~/modules/primevue/runtime/plugin'],
+
   srcDir: 'src/',
 
   typescript: {
@@ -98,6 +105,13 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    vue: {
+      template: {
+        transformAssetUrls: {
+          includeAbsolute: false
+        }
+      }
+    },
     build: {
       sourcemap: false
     },

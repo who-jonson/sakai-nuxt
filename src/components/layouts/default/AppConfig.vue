@@ -38,7 +38,7 @@ export default defineComponent({
       return ['layout-config', { 'layout-config-active': this.active }];
     },
     inputStyle() {
-      return this.$primevue.config.inputStyle;
+      return this.$primevue.config.inputVariant || this.$primevue.config.inputStyle;
     }
   },
   watch: {
@@ -71,6 +71,7 @@ export default defineComponent({
     },
     changeInputStyle(value: string) {
       this.$primevue.config.inputStyle = value;
+      this.$primevue.config.inputVariant = value;
     },
     changeLayout(event: Event, layoutMode: string) {
       this.$emit('layoutChange', layoutMode);
