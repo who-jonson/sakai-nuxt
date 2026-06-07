@@ -1,5 +1,5 @@
 <script lang="ts">
-import { FilterMatchMode, FilterOperator } from 'primevue/api';
+import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 import CustomerService from '~~/services/CustomerService';
 import ProductService from '~~/services/ProductService';
 

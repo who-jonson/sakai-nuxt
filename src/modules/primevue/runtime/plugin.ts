@@ -1,9 +1,7 @@
 import Ripple from 'primevue/ripple';
 import Tooltip from 'primevue/tooltip';
 import StyleClass from 'primevue/styleclass';
-import ToastService from 'primevue/toastservice';
 import BadgeDirective from 'primevue/badgedirective';
-import ConfirmationService from 'primevue/confirmationservice';
 import { createGlobalState, reactiveComputed, useLocalStorage } from '@vueuse/core';
 
 import CodeHighlight from '~/directives/code';
@@ -14,9 +12,6 @@ declare interface AppState {
 }
 
 export default defineNuxtPlugin(({ vueApp: app }) => {
-  app.use(ConfirmationService);
-  app.use(ToastService);
-
   app.directive('tooltip', Tooltip);
   app.directive('ripple', Ripple);
   app.directive('code', CodeHighlight);
